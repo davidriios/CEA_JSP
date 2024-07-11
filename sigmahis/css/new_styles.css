@@ -1,0 +1,114 @@
+.box{padding:0px;margin-top:0;height:75px;width:75px;text-align:center;font-weight:bold;float:left;margin:10px;line-height:36px;position:relative;background-color:#ccccff;}
+
+.bgc-price-inactive{background-color:transparent !important; color: #bebebe !important;}
+.bgc-inactive{background-color:transparent !important; color: #bebebe !important;}
+
+.boxactive{border:5px solid #00FF00;}
+.boxinactive{border:5px solid #bebebe;}
+.boxtramite{border:5px solid #FFBF00;}
+.boxenuso{border:5px solid #cc0000;}
+.boxmantenimiento{border:5px solid #004f9f;}
+
+.box-info{width:25px; height:25px; display:inline-block; vertical-align:bottom;}
+.box-info-d{background-color:#00FF00;}
+.box-info-u{background-color:#cc0000;}
+.box-info-i{background-color:#bebebe;}
+.box-info-m{background-color:#FFBF00;}
+.box-info-t{background-color:#bababa;}
+.box-info-bb{background-color:#004f9f;}
+ 
+.text{margin:0 auto;clear:both;}
+ 
+.camaimg{background:url('../images/bed.png') no-repeat;height: 25px;margin-left: -1px;margin-top: -6px;width: 32px;}
+.price{text-align:right;background-color:#cc3300;color:#fff;line-height:20px;height:20px;position:relative;display:block;font-size:12px;}
+
+.iHide{background:url('../images/l_arrow.png') no-repeat;float:right;}
+.iShow{background:url('../images/r_arrow.png') no-repeat;float:right;}
+.showHideXtraInfo{cursor:pointer;height:20px;width:20px;display:none;}
+
+.warning-box {border: 1px solid;margin: 10px 0px;padding:15px 10px 15px 6px;background-repeat: no-repeat;background-position: 10px center;}
+
+.warning {color: #fff;background-color: #5E5959;background-image: url('../images/warning_48.png');font-weight:bold;}
+
+/*Default Cellbyte Button Color scheme*/
+.CellbyteBtn {
+	background-color:#ffffff;
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+	border-radius:1px;
+	border:1px solid #000000;
+	display:inline-block;
+	color:#000000;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:1px 4px;
+	text-decoration:none;
+}
+.CellbyteBtn:hover {
+	background-color:#f6f6f6;
+	color:#e62727;
+	cursor: pointer;
+}
+.CellbyteBtn:active {
+	position:relative;
+	top:1px;
+}
+
+button.CellbyteBtn[disabled]:active:hover, button.CellbyteBtn[disabled],
+input.CellbyteBtn[type="reset"][disabled]:active:hover,
+input.CellbyteBtn[type="reset"][disabled],
+input.CellbyteBtn[type="button"][disabled]:active:hover,
+input.CellbyteBtn[type="button"][disabled],
+select.CellbyteBtn[disabled] > input.CellbyteBtn[type="button"],
+select.CellbyteBtn[disabled] > input.CellbyteBtn[type="button"]:active:hover,
+input.CellbyteBtn[type="submit"][disabled]:active:hover,
+input.CellbyteBtn[type="submit"][disabled] {
+  color: GrayText;
+  cursor: inherit;
+  top:0px;
+  border:none;
+  background-color:#ffffff;
+}
+
+/*Mini info button*/
+
+.miniinfoBtn {
+background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+background-color:#79bbff;-moz-border-radius:1px;-webkit-border-radius:1px;border-radius:1px;
+border:1px solid #84bbf3;display:inline-block;color:#ffffff;font-family:Georgia;font-size:14px;font-weight:bold;
+padding:1px 4px;text-decoration:none;}
+.miniinfoBtn:hover {
+background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+background-color:#378de5;}
+.miniinfoBtn:active {
+position:relative;top:1px;}
+
+/* EXPEDIENTE */
+.exp,.adm,.caja{overflow:scroll;position:relative;}
+.child{position:absolute;width:100%;}
+.h100{height:100px}
+.h150{height:150px}
+.h200{height:200px}
+.h260{height:260px}
+.h300{height:300px}
+.h350{height:350px}
+.h400{height:400px}
+
+.inactive{color:GrayText; font-size:12px; font-family:Verdana, Arial, Helvetica, sans-serif; background-color:#ffffff; font-weight:bold;}
+.lt{text-decoration:line-through;}
+
+.cargado{background:url('../images/cash_receiving.png') no-repeat;float:right;height:16px; width:16px; cursor:pointer;}
+.errorFecha{background:url('../images/update.png') no-repeat;float:right;height:16px; width:16px; cursor:pointer;}
+.obserAdmin{background:url('../images/observ_administrativa.png') no-repeat;float:right;height:16px; width:16px; cursor:pointer;}
+
+.alert{color: #9F6000; background: #FEEFB3; font-weight:bold;cursor:pointer; padding:5px;}
+.alert:hover{border:#f00 solid 1px;}
+.pointer{cursor:pointer;}
+
+.FormDataObjectRequired{ background-color:#ffffcc !important; }
+.bg-warning {background-color: #ffffcc !important;}

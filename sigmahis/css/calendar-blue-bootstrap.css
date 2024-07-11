@@ -1,0 +1,250 @@
+/*  Selector DHTML de Fecha/Hora
+    (c) dynarch.com 2002-2005 / Author: Mihai Bazon
+    2016 Update And Theme Theory Design by. eduardo.b@issi-panama.com
+    2016 Update by. ISSI PANAMÁ info@issi-panama.com */
+
+
+/* Esta es la Tabla Principal del Calendario el DIV contiene TODO. */
+
+    div.calendar { 
+    position:relative;
+    z-index: 5 !important;
+    border: 1px #ccc solid;
+    -webkit-box-shadow: 0px 8px 19px -3px rgba(23,23,23,0.38);
+    -moz-box-shadow: 0px 8px 19px -3px rgba(23,23,23,0.38);
+    box-shadow: 0px 8px 19px -3px rgba(23,23,23,0.38);
+    }
+
+    .calendar, .calendar table {
+    font-size: 15px;
+    color: #2C3E50;
+    cursor: default;
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px !important;
+    }
+
+/* La Cabecera, contiene los titulos de los dias y los botones de navegacion. */
+
+    .calendar .button { 
+    text-align: center;
+    padding: 5px !important;
+    cursor:pointer;
+    }
+
+    .calendar .nav {
+    background: transparent;
+    cursor:pointer;
+    }
+
+    .calendar thead .title { 
+    font-weight: bold;      
+    text-align: center;
+    background: transparent;
+    color: #2C3E50;
+    
+    }
+
+    .calendar thead .title:hover { 
+    font-weight: bold;      
+    text-align: center;
+    background: #eee;
+    color: #2C3E50;
+    }
+
+    .calendar thead .headrow { 
+    background: transparent;
+    color: #2C3E50;
+    }
+
+    .calendar thead .daynames { 
+    background: transparent;
+    }
+
+    .calendar thead .name { 
+    text-align: center;
+    color: #2C3E50;
+    }
+
+    .calendar thead .weekend { 
+    color: #2C3E50;
+    }
+
+    .calendar thead .hilite { 
+    background: transparent;
+    color: #2C3E50;
+
+    }
+    .calendar thead .hilite:hover { 
+    background: #000;
+    color: #eee;
+
+    }
+    .calendar thead .hilite:hover { 
+    background: #EEEEEE;
+    color: #2C3E50;
+    border-radius: 4px;
+cursor:pointer;
+    }
+
+    .calendar thead .active { 
+    background: #798D8F;
+    color: #fff;
+    }
+
+/* A partir de aqui es el cuerpo de la tabla. */
+
+    .calendar tbody .day { 
+    width: 35px;
+    height: 30px;
+    color: #2C3E50;
+    text-align: center;
+    cursor:pointer;
+    }
+
+    .calendar tbody .day.othermonth {
+    font-size: 80%;
+    color: #2C3E50;
+    cursor:pointer;
+    }
+
+    .calendar tbody .day.othermonth.oweekend {
+    color: #2C3E50;
+    }
+    
+    .calendar tbody td.active { 
+    background: #000;
+    }
+
+    .calendar tbody td:hover { 
+    background: #eee;
+    border-radius: 5px;
+    border: none;
+    }
+
+    .calendar tbody td.selected { 
+    font-weight: bold;
+    background: #2c3e50;
+    color: #fff !important;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .calendar tbody td.weekend { 
+    color: #c7c7c7;
+    }
+
+    .calendar tbody td.today { 
+    font-weight: bold;
+    color: #2c3e50;
+    border: none;
+    }
+
+    .calendar tbody .disabled { color: #eee; }
+
+    .calendar tbody .emptycell {
+    visibility: hidden;
+    }
+
+    .calendar tbody .emptyrow { 
+    display: none;
+    }
+
+/* A partir de aqui es el pie de la tabla */
+
+    .calendar tfoot .footrow {
+    text-align: center;
+    background: transparent;
+    color: #fff;
+    }
+
+    .calendar tfoot .ttip { 
+    background: transparent;
+    color: #c7c7c7;
+    margin: 3px;
+    font-size: 12px;
+    }
+
+    .calendar tfoot .hilite { 
+    background: #2c3e50;
+    border: solid #eee;
+    color: #fff;
+    }
+
+    .calendar tfoot .active { 
+    background: transparent;
+    }
+
+/* Combo boxes (Menus que muestran selectores de años y meses) */
+
+    .calendar .combo {
+    position: absolute;
+    border: 1px #ccc solid;
+    top: 0px;
+    left: 0px;
+    cursor:pointer;
+    color: #2c3e50 !important;
+    font-size: 100%;
+    background: #fff !important; /* Fondo de los selectores flotante dejar #fff */
+    -webkit-box-shadow: 9px 8px 14px -9px rgba(69,69,69,0.4);
+    -moz-box-shadow: 9px 8px 14px -9px rgba(69,69,69,0.4);
+    box-shadow: 9px 8px 14px -9px rgba(69,69,69,0.4);
+    }
+
+    .calendar .combo .label,
+    .calendar .combo .label-IEfix {
+    text-align: center;
+    color: #2c3e50;
+    }
+
+    .calendar .combo .label-IEfix {
+    width: 6em;
+
+    }
+
+    .calendar .combo .hilite {
+    background: #eee;
+    color: #2c3e50;
+    }
+
+    .calendar .combo .active {
+    background: #eef;
+    font-weight: bold;
+    }
+
+    .calendar td.time {
+    text-align: center;
+    font-weight: bold;
+    background: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+
+    .calendar td.time .hour,
+    .calendar td.time .minute { 
+    font-size: 25px;
+    font-weight: bold;
+    background: transparent;
+    }
+
+    .calendar td.time .ampm {
+    font-weight: bold;
+    background: transparent;
+    }
+
+    .calendar td.time .colon {
+    font-weight: bold;
+    }
+
+    .calendar td.time span.hilite {
+    background: transparent;
+    border-radius: 4px;
+    cursor:pointer;
+    }
+
+    .calendar td.time span.active {
+    background: transparent;
+    color: #999;
+    cursor:w-resize;
+    }

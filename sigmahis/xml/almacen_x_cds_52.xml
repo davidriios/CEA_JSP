@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding='ISO-8859-1'?>
+<ROWSET>
+   <ROW num="1">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - ALMACEN C.GENERAL</LABEL_COL>
+      <KEY_COL>1--2</KEY_COL>
+   </ROW>
+   <ROW num="2">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - ALMACEN C.GENERAL</LABEL_COL>
+      <KEY_COL>1--1</KEY_COL>
+   </ROW>
+   <ROW num="3">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ALMACEN LABORATORIO</LABEL_COL>
+      <KEY_COL>1-9</KEY_COL>
+   </ROW>
+   <ROW num="4">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - FARMACIA EXTERNA</LABEL_COL>
+      <KEY_COL>1-12</KEY_COL>
+   </ROW>
+   <ROW num="5">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - ALMACEN C.GENERAL</LABEL_COL>
+      <KEY_COL>1-12</KEY_COL>
+   </ROW>
+   <ROW num="6">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - FARMACIA EXTERNA</LABEL_COL>
+      <KEY_COL>1-14</KEY_COL>
+   </ROW>
+   <ROW num="7">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ALMACEN LABORATORIO</LABEL_COL>
+      <KEY_COL>1-25</KEY_COL>
+   </ROW>
+   <ROW num="8">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ALMACEN LABORATORIO</LABEL_COL>
+      <KEY_COL>1-26</KEY_COL>
+   </ROW>
+   <ROW num="9">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ALMACEN LABORATORIO</LABEL_COL>
+      <KEY_COL>1-27</KEY_COL>
+   </ROW>
+   <ROW num="10">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ALMACEN LABORATORIO</LABEL_COL>
+      <KEY_COL>1-28</KEY_COL>
+   </ROW>
+   <ROW num="11">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ALMACEN LABORATORIO</LABEL_COL>
+      <KEY_COL>1-29</KEY_COL>
+   </ROW>
+   <ROW num="12">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ALMACEN LABORATORIO</LABEL_COL>
+      <KEY_COL>1-30</KEY_COL>
+   </ROW>
+   <ROW num="13">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ALMACEN LABORATORIO</LABEL_COL>
+      <KEY_COL>1-37</KEY_COL>
+   </ROW>
+   <ROW num="14">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ALMACEN LABORATORIO</LABEL_COL>
+      <KEY_COL>1-38</KEY_COL>
+   </ROW>
+   <ROW num="15">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ALMACEN LABORATORIO</LABEL_COL>
+      <KEY_COL>1-39</KEY_COL>
+   </ROW>
+   <ROW num="16">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - FARMACIA EXTERNA</LABEL_COL>
+      <KEY_COL>1-42</KEY_COL>
+   </ROW>
+   <ROW num="17">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - ALMACEN C.GENERAL</LABEL_COL>
+      <KEY_COL>1-50</KEY_COL>
+   </ROW>
+   <ROW num="18">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - ALMACEN C.GENERAL</LABEL_COL>
+      <KEY_COL>1-55</KEY_COL>
+   </ROW>
+   <ROW num="19">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ALMACEN LABORATORIO</LABEL_COL>
+      <KEY_COL>1-55</KEY_COL>
+   </ROW>
+   <ROW num="20">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - FARMACIA EXTERNA</LABEL_COL>
+      <KEY_COL>1-75</KEY_COL>
+   </ROW>
+   <ROW num="21">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - ALMACEN FARMACIA</LABEL_COL>
+      <KEY_COL>2-40</KEY_COL>
+   </ROW>
+</ROWSET>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding='ISO-8859-1'?>
+<ROWSET>
+   <ROW num="1">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - ALMACEN FARMACIA</LABEL_COL>
+      <KEY_COL>2-40</KEY_COL>
+   </ROW>
+   <ROW num="2">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>3 - BODEGA FARMACIA</LABEL_COL>
+      <KEY_COL>2-40</KEY_COL>
+   </ROW>
+   <ROW num="3">
+      <VALUE_COL>16</VALUE_COL>
+      <LABEL_COL>16 - DEVOLUCIONES FARMACIA</LABEL_COL>
+      <KEY_COL>2-40</KEY_COL>
+   </ROW>
+</ROWSET>

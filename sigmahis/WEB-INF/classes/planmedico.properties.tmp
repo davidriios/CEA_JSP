@@ -1,0 +1,18 @@
+# ResourceBundle properties file
+
+#################################################################
+#                                                               #
+#   Author: Jose De Gracia G.                                   #
+#   Date Created: 22 - Jan - 2013                               #
+#   Edited: E.B.                            #
+#################################################################
+
+#################################################################
+#                   P L A N   M E D I C O                       #
+#################################################################
+#Para identificar si la aplicacion usa plan medico S=Si, N=No
+usaPlanMedico=N
+#Para identificar la empresa que se utiliza en plan medico
+empresa=
+#Para identificar el tipo de cliente de plan medico
+tipo_cliente=31

@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding='ISO-8859-1'?>
+<ROWSET>
+   <ROW num="1">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>AMBULATORIO (SDS/PAM)</LABEL_COL>
+      <KEY_COL>28</KEY_COL>
+      <TITLE_COL>3</TITLE_COL>
+   </ROW>
+   <ROW num="2">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>AMBULATORIO (SDS/PAM)</LABEL_COL>
+      <KEY_COL>19</KEY_COL>
+      <TITLE_COL>3</TITLE_COL>
+   </ROW>
+   <ROW num="3">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>AMBULATORIO (SDS/PAM)</LABEL_COL>
+      <KEY_COL>22</KEY_COL>
+      <TITLE_COL>3</TITLE_COL>
+   </ROW>
+   <ROW num="4">
+      <VALUE_COL>4</VALUE_COL>
+      <LABEL_COL>CONSULTA EXTERNA (OPD)</LABEL_COL>
+      <KEY_COL>19</KEY_COL>
+      <TITLE_COL>4</TITLE_COL>
+   </ROW>
+   <ROW num="5">
+      <VALUE_COL>4</VALUE_COL>
+      <LABEL_COL>CONSULTA EXTERNA (OPD)</LABEL_COL>
+      <KEY_COL>28</KEY_COL>
+      <TITLE_COL>4</TITLE_COL>
+   </ROW>
+   <ROW num="6">
+      <VALUE_COL>4</VALUE_COL>
+      <LABEL_COL>CONSULTA EXTERNA (OPD)</LABEL_COL>
+      <KEY_COL>22</KEY_COL>
+      <TITLE_COL>4</TITLE_COL>
+   </ROW>
+   <ROW num="7">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>HOSPITALIZADO (HSP)</LABEL_COL>
+      <KEY_COL>22</KEY_COL>
+      <TITLE_COL>1</TITLE_COL>
+   </ROW>
+   <ROW num="8">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>HOSPITALIZADO (HSP)</LABEL_COL>
+      <KEY_COL>3</KEY_COL>
+      <TITLE_COL>1</TITLE_COL>
+   </ROW>
+   <ROW num="9">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>HOSPITALIZADO (HSP)</LABEL_COL>
+      <KEY_COL>19</KEY_COL>
+      <TITLE_COL>1</TITLE_COL>
+   </ROW>
+   <ROW num="10">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>HOSPITALIZADO (HSP)</LABEL_COL>
+      <KEY_COL>28</KEY_COL>
+      <TITLE_COL>1</TITLE_COL>
+   </ROW>
+   <ROW num="11">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>URGENCIAS (EGY)</LABEL_COL>
+      <KEY_COL>22</KEY_COL>
+      <TITLE_COL>2</TITLE_COL>
+   </ROW>
+   <ROW num="12">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>URGENCIAS (EGY)</LABEL_COL>
+      <KEY_COL>28</KEY_COL>
+      <TITLE_COL>2</TITLE_COL>
+   </ROW>
+   <ROW num="13">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>URGENCIAS (EGY)</LABEL_COL>
+      <KEY_COL>3</KEY_COL>
+      <TITLE_COL>2</TITLE_COL>
+   </ROW>
+</ROWSET>

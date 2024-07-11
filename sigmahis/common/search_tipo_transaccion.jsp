@@ -1,0 +1,369 @@
+<%@ page errorPage="../error.jsp"%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="issi.admin.CommonDataObject"%>
+<%@ page import="issi.admin.FormBean"%>
+<jsp:useBean id="ConMgr" scope="session" class="issi.admin.ConnectionMgr" />
+<jsp:useBean id="SecMgr" scope="session" class="issi.admin.SecurityMgr" />
+<jsp:useBean id="UserDet" scope="session" class="issi.admin.UserDetail" />
+<jsp:useBean id="CmnMgr" scope="page" class="issi.admin.CommonMgr" />
+<jsp:useBean id="SQLMgr" scope="page" class="issi.admin.SQLMgr" />
+<jsp:useBean id="fb" scope="page" class="issi.admin.FormBean" />
+<%
+/**
+
+==================================================================================
+==================================================================================
+**/
+SecMgr.setConnection(ConMgr);
+if (!SecMgr.checkLogin(session.getId())) throw new Exception("Usted está fuera del sistema. Por favor entre al sistema con su nombre de usuario y clave!!!");
+//if (!(SecMgr.checkAccess(session.getId(),"0") || SecMgr.checkAccess(session.getId(),"400005") || SecMgr.checkAccess(session.getId(),"400006") || SecMgr.checkAccess(session.getId(),"400007") || SecMgr.checkAccess(session.getId(),"400008"))) throw new Exception("Usted no tiene los suficientes Derechos de Acceso a esta página.");
+UserDet = SecMgr.getUserDetails(session.getId());
+session.setAttribute("UserDet",UserDet);
+issi.admin.ISSILogger.setSession(session);
+
+CmnMgr.setConnection(ConMgr);
+SQLMgr.setConnection(ConMgr);
+
+ArrayList al = new ArrayList();
+int rowCount = 0;
+String sql = "";
+String appendFilter = "";
+String fp = request.getParameter("fp");
+String index = request.getParameter("index");
+
+if (fp == null) throw new Exception("La Localización Origen no es válida. Por favor intente nuevamente!");
+
+if (request.getMethod().equalsIgnoreCase("GET"))
+{
+  int recsPerPage = 100;
+  String nextVal = ""+recsPerPage, previousVal = "1", searchQuery, searchOn = "SO", searchVal = "Todos", searchType = "ST", searchDisp = "SD", searchValDisp = "Todos", searchValFromDate = "SVFD", searchValToDate = "SVTD";
+  if (request.getParameter("searchQuery") != null)
+  {
+    nextVal = request.getParameter("nextVal");
+    previousVal = request.getParameter("previousVal");
+    if (!request.getParameter("searchOn").equals("SO")) searchOn = request.getParameter("searchOn");
+    if (!request.getParameter("searchVal").equals("Todos")) searchVal = request.getParameter("searchVal");
+    if (!request.getParameter("searchType").equals("ST")) searchType = request.getParameter("searchType");
+    if (!request.getParameter("searchDisp").equals("SD")) searchDisp = request.getParameter("searchDisp");
+		if (!request.getParameter("searchValFromDate").equals("SVFD")) searchValFromDate = request.getParameter("searchValFromDate");
+		if (!request.getParameter("searchValToDate").equals("SVTD")) searchValToDate = request.getParameter("searchValToDate");
+  }
+  
+  if (request.getParameter("codigo") != null)
+  {
+		appendFilter += " and upper(codigo) like '%"+request.getParameter("codigo").toUpperCase()+"%'";
+    searchOn = "codigo";
+    searchVal = request.getParameter("codigo");
+    searchType = "1";
+    searchDisp = "Código";
+  }
+  else if (request.getParameter("descripcion") != null)
+  {
+		appendFilter += " and upper(descripcion) like '%"+request.getParameter("descripcion").toUpperCase()+"%'";
+    searchOn = "descripcion";
+    searchVal = request.getParameter("descripcion");
+    searchType = "1";
+    searchDisp = "Descripcion";
+  }
+  else if (request.getParameter("searchQuery") != null && !request.getParameter("searchOn").equals("Todos") && (!request.getParameter("searchVal").equals("SV") || (!request.getParameter("searchValFromDate").equals("SVFD") && !request.getParameter("searchValToDate").equals("SVTD"))) && !request.getParameter("searchType").equals("ST"))
+  {
+		if (searchType.equals("1"))
+  	{
+    	appendFilter += " and upper("+searchOn+") like '%"+searchVal.toUpperCase()+"%'";
+  	}
+  }
+  else
+  {
+    searchOn="SO";
+    searchVal="Todos";
+    searchType="ST";
+    searchDisp="Listado";
+  }
+
+	if (fp.equalsIgnoreCase("recibos"))
+	{
+		sql = "SELECT codigo, descripcion FROM tbl_cja_tipo_transaccion "+appendFilter.replace("and","where")+" ORDER BY descripcion ";
+		al = SQLMgr.getDataList("select * from (select rownum as rn, a.* from ("+sql+") a) where rn between "+previousVal+" and "+nextVal);
+		rowCount = CmnMgr.getCount("SELECT count(*) FROM tbl_cja_tipo_transaccion "+appendFilter);
+	}
+
+  if (fp.equalsIgnoreCase("otro_pago"))
+	{
+		sql = "SELECT sub_tipo as codigo, descripcion, transaccion, monto FROM tbl_pla_sub_tipo_transaccion where compania="+(String) session.getAttribute("_companyId")+appendFilter+" ORDER BY descripcion ";
+		al = SQLMgr.getDataList("select * from (select rownum as rn, a.* from ("+sql+") a) where rn between "+previousVal+" and "+nextVal);
+		rowCount = CmnMgr.getCount("SELECT count(*) FROM tbl_tbl_sub_tipo_transaccion where compania="+(String) session.getAttribute("_companyId")+appendFilter);
+	}
+
+	if (fp.equalsIgnoreCase("registro"))
+	{
+		sql = "SELECT codigo, descripcion FROM tbl_pla_tipo_transaccion where compania="+(String) session.getAttribute("_companyId")+appendFilter+" ORDER BY codigo ";
+		al = SQLMgr.getDataList("select * from (select rownum as rn, a.* from ("+sql+") a) where rn between "+previousVal+" and "+nextVal);
+		rowCount = CmnMgr.getCount("SELECT count(*) FROM tbl_pla_tipo_transaccion where compania="+(String) session.getAttribute("_companyId")+appendFilter);
+	}
+
+
+
+  if (searchDisp!=null) searchDisp=searchDisp;
+  else searchDisp = "Listado";
+  
+  if (!searchVal.equals("")) searchValDisp=searchVal;
+  else searchValDisp="Todos";
+
+  int nVal, pVal;
+  int preVal=Integer.parseInt(previousVal);
+  int nxtVal=Integer.parseInt(nextVal);
+  
+  if (nxtVal<=rowCount) nVal=nxtVal;
+  else nVal=rowCount;
+  
+  if(rowCount==0) pVal=0;
+  else pVal=preVal;
+%>  
+<html>
+<head>
+<%@ include file="../common/nocache.jsp"%>
+<%@ include file="../common/header_param.jsp"%>
+<script language="javascript">
+document.title = 'Tipo de Transaccion - '+document.title;
+
+function setRecibos(k)
+{
+	<% if (fp.equalsIgnoreCase("recibos"))
+	{
+	%>
+
+	window.opener.document.getElementById("tipoTransaccion"+<%=request.getParameter("element")%>).value = document.getElementById("codigo"+k).value;
+	window.opener.document.getElementById("transacDetalle"+<%=request.getParameter("element")%>).value = document.getElementById("descripcion"+k).value;
+	<% } %>
+	<% if (fp.equalsIgnoreCase("otro_pago"))
+	{
+	%>
+
+	 window.opener.document.formOtro.codPert.value = eval('document.tipoTrans.codigo'+k).value;
+	 window.opener.document.formOtro.pertDesc.value = eval('document.tipoTrans.descripcion'+k).value;
+	 window.opener.document.formOtro.monto<%=index%>.value = eval('document.tipoTrans.monto'+k).value;
+	 window.opener.document.formOtro.transaccion.value = eval('document.tipoTrans.transaccion'+k).value;
+	  window.opener.document.formOtro.pago<%=index%>.value = eval('document.tipoTrans.monto'+k).value;
+	  window.opener.document.formOtro.cantidad<%=index%>.value = 1;
+	<% } %>
+	
+		<% if (fp.equalsIgnoreCase("registrar"))
+	{
+	%>
+ 	  	window.opener.document.formRegistro.tipotrx<%=index%>.value = eval('document.tipoTrans.codigo'+k).value;
+  	 window.opener.document.formRegistro.tipotrxDesc<%=index%>.value = eval('document.tipoTrans.descripcion'+k).value;
+
+	<% } %>
+		<% if (fp.equalsIgnoreCase("registro"))
+	{
+	%>
+ 	  	window.opener.document.formRegistro.tipotrx.value = eval('document.tipoTrans.codigo'+k).value;
+  	 window.opener.document.formRegistro.tipotrxDesc.value = eval('document.tipoTrans.descripcion'+k).value;
+
+	<% } %>
+	
+	window.close();	
+}
+</script>
+</head>
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<jsp:include page="../common/title.jsp" flush="true">
+	<jsp:param name="title" value="SELECCION DE EMPRESA"></jsp:param>
+</jsp:include>
+<table align="center" width="99%" cellpadding="1" cellspacing="0">
+	<tr>
+		<td>
+<!-- ================================   S E A R C H   E N G I N E S   S T A R T   H E R E   ================================ -->		
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr class="TextFilter">		
+<%
+fb = new FormBean("search01",request.getContextPath()+"/common/urlRedirect.jsp");
+%>
+					<%=fb.formStart()%>
+					<%=fb.hidden("fp",request.getParameter("fp"))%>
+					<%=fb.hidden("element",request.getParameter("element"))%>
+					
+					<%=fb.hidden("fromPage",request.getContextPath()+request.getServletPath())%>
+					<%=fb.hidden("toPage",request.getContextPath()+request.getServletPath())%>
+					<%=fb.hidden("fp",fp)%>
+					<%=fb.hidden("index",index)%>
+					<td width="50%">Codigo					
+					<%=fb.textBox("codigo","",false,false,false,40)%>
+					<%=fb.submit("go","Ir")%>
+					</td>
+					<%=fb.formEnd()%>
+				
+<%
+fb = new FormBean("search02",request.getContextPath()+"/common/urlRedirect.jsp");
+%>
+					<%=fb.formStart()%>
+					<%=fb.hidden("fp",request.getParameter("fp"))%>
+					<%=fb.hidden("element",request.getParameter("element"))%>
+					
+					<%=fb.hidden("fromPage",request.getContextPath()+request.getServletPath())%>
+					<%=fb.hidden("toPage",request.getContextPath()+request.getServletPath())%>
+					<%=fb.hidden("fp",fp)%>
+					<%=fb.hidden("index",index)%>
+					<td width="50%">Descripcion
+					<%=fb.textBox("descripcion","",false,false,false,40)%>
+					<%=fb.submit("go","Ir")%>
+					</td>
+					<%=fb.formEnd()%>	
+				</tr>
+			</table>
+<!-- ================================   S E A R C H   E N G I N E S   E N D   H E R E   ================================ -->
+		</td>
+	</tr>
+	<tr>
+		<td align="right">&nbsp;</td>
+	</tr>
+</table>
+
+<table align="center" width="99%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="TableLeftBorder TableTopBorder TableRightBorder">
+			<table align="center" width="100%" cellpadding="1" cellspacing="0">
+				<tr class="TextPager">
+<%
+fb = new FormBean("topPrevious",request.getContextPath()+"/common/urlRedirect.jsp");
+%>
+					<%=fb.formStart()%>
+					<%=fb.hidden("fromPage",request.getContextPath()+request.getServletPath())%>
+					<%=fb.hidden("toPage",request.getContextPath()+request.getServletPath())%>
+					<%=fb.hidden("nextVal",""+(nxtVal-recsPerPage))%>
+					<%=fb.hidden("previousVal",""+(preVal-recsPerPage))%>
+					<%=fb.hidden("searchOn",searchOn)%>
+					<%=fb.hidden("searchVal",searchVal)%>
+					<%=fb.hidden("searchValFromDate",searchValFromDate)%>
+					<%=fb.hidden("searchValToDate",searchValToDate)%>
+					<%=fb.hidden("searchType",searchType)%>
+					<%=fb.hidden("searchDisp",searchDisp)%>
+					<%=fb.hidden("searchQuery","sQ")%>
+					
+					<%=fb.hidden("fp",request.getParameter("fp"))%>
+					<%=fb.hidden("element",request.getParameter("element"))%>
+					
+					<%=fb.hidden("index",index)%>
+					<td width="10%"><%=(preVal != 1)?fb.submit("previous","<<-"):""%></td>
+					<%=fb.formEnd()%>
+					<td width="40%">Total Registro(s) <%=rowCount%></td>
+					<td width="40%" align="right">Registros desde <%=pVal%> hasta <%=nVal%></td>
+<%
+fb = new FormBean("topNext",request.getContextPath()+"/common/urlRedirect.jsp");
+%>
+					<%=fb.formStart()%>
+					<%=fb.hidden("fromPage",request.getContextPath()+request.getServletPath())%>
+					<%=fb.hidden("toPage",request.getContextPath()+request.getServletPath())%>
+					<%=fb.hidden("nextVal",""+(nxtVal+recsPerPage))%>
+					<%=fb.hidden("previousVal",""+(preVal+recsPerPage))%>
+					<%=fb.hidden("searchOn",searchOn)%>
+					<%=fb.hidden("searchVal",searchVal)%>
+					<%=fb.hidden("searchValFromDate",searchValFromDate)%>
+					<%=fb.hidden("searchValToDate",searchValToDate)%>
+					<%=fb.hidden("searchType",searchType)%>
+					<%=fb.hidden("searchDisp",searchDisp)%>
+					<%=fb.hidden("searchQuery","sQ")%>
+					<%=fb.hidden("fp",fp)%>
+					<%=fb.hidden("index",index)%>
+					<td width="10%" align="right"><%=(!(rowCount <= nxtVal))?fb.submit("next","->>"):""%></td>
+					<%=fb.formEnd()%>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>	
+
+<table align="center" width="99%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="TableLeftBorder TableRightBorder">
+	
+<!-- ================================   R E S U L T S   S T A R T   H E R E   ================================ -->
+	
+<table align="center" width="100%" cellpadding="1" cellspacing="1" class="sortable" id="list">
+				<tr class="TextHeader" align="center">
+					<td width="30%">C&oacute;digo</td>
+					<td width="70%">Descripcion</td>
+				</tr>				
+<% fb = new FormBean("tipoTrans",request.getContextPath()+"/common/urlRedirect.jsp"); %>
+<%=fb.formStart()%>
+<% for (int i=0; i<al.size(); i++)
+{
+				CommonDataObject cdo = (CommonDataObject) al.get(i);
+				String color = "TextRow02";
+				if (i % 2 == 0) color = "TextRow01";
+%>
+				<%=fb.hidden("codigo"+i,cdo.getColValue("codigo"))%>
+				<%=fb.hidden("descripcion"+i,cdo.getColValue("descripcion"))%>	
+				<%=fb.hidden("monto"+i,cdo.getColValue("monto"))%>
+				<%=fb.hidden("transaccion"+i,cdo.getColValue("transaccion"))%>				
+				<tr class="<%=color%>" onMouseOver="setoverc(this,'TextRowOver')" onMouseOut="setoutc(this,'<%=color%>')" onClick="javascript:setRecibos(<%=i%>)" style="cursor:pointer">
+					<td><%=cdo.getColValue("codigo")%></td>
+					<td><%=cdo.getColValue("descripcion")%></td>
+				</tr>
+<% } %>	
+<%=fb.formEnd()%>
+</table>
+	
+<!-- ================================   R E S U L T S   E N D   H E R E   ================================ -->
+	
+		</td>
+	</tr>
+</table>				
+
+<table align="center" width="99%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="TableLeftBorder TableBottomBorder TableRightBorder">
+			<table align="center" width="100%" cellpadding="1" cellspacing="0">
+				<tr class="TextPager">
+<%
+fb = new FormBean("bottomPrevious",request.getContextPath()+"/common/urlRedirect.jsp");
+%>
+					<%=fb.formStart()%>
+					<%=fb.hidden("fromPage",request.getContextPath()+request.getServletPath())%>
+					<%=fb.hidden("toPage",request.getContextPath()+request.getServletPath())%>
+					<%=fb.hidden("nextVal",""+(nxtVal-recsPerPage))%>
+					<%=fb.hidden("previousVal",""+(preVal-recsPerPage))%>
+					<%=fb.hidden("searchOn",searchOn)%>
+					<%=fb.hidden("searchVal",searchVal)%>
+					<%=fb.hidden("searchValFromDate",searchValFromDate)%>
+					<%=fb.hidden("searchValToDate",searchValToDate)%>
+					<%=fb.hidden("searchType",searchType)%>
+					<%=fb.hidden("searchDisp",searchDisp)%>
+					<%=fb.hidden("searchQuery","sQ")%>
+					<%=fb.hidden("fp",fp)%>
+					<%=fb.hidden("index",index)%>
+					<td width="10%"><%=(preVal != 1)?fb.submit("previous","<<-"):""%></td>
+					<%=fb.formEnd()%>
+					<td width="40%">Total Registro(s) <%=rowCount%></td>
+					<td width="40%" align="right">Registros desde <%=pVal%> hasta <%=nVal%></td>
+<%
+fb = new FormBean("bottomNext",request.getContextPath()+"/common/urlRedirect.jsp");
+%>
+					<%=fb.formStart()%>
+					<%=fb.hidden("fromPage",request.getContextPath()+request.getServletPath())%>
+					<%=fb.hidden("toPage",request.getContextPath()+request.getServletPath())%>
+					<%=fb.hidden("nextVal",""+(nxtVal+recsPerPage))%>
+					<%=fb.hidden("previousVal",""+(preVal+recsPerPage))%>
+					<%=fb.hidden("searchOn",searchOn)%>
+					<%=fb.hidden("searchVal",searchVal)%>
+					<%=fb.hidden("searchValFromDate",searchValFromDate)%>
+					<%=fb.hidden("searchValToDate",searchValToDate)%>
+					<%=fb.hidden("searchType",searchType)%>
+					<%=fb.hidden("searchDisp",searchDisp)%>
+					<%=fb.hidden("searchQuery","sQ")%>
+					<%=fb.hidden("fp",fp)%>
+					<%=fb.hidden("index",index)%>
+					<td width="10%" align="right"><%=(!(rowCount <= nxtVal))?fb.submit("next","->>"):""%></td>
+					<%=fb.formEnd()%>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<%@ include file="../common/footer.jsp"%>
+</body>
+</html>
+<%
+}
+%>

@@ -1,0 +1,28 @@
+<?xml version = '1.0' encoding='ISO-8859-1'?>
+<ROWSET>
+   <ROW num="1">
+      <KEY_COL>1</KEY_COL>
+      <VALUE_COL>LB</VALUE_COL>
+      <LABEL_COL>LIBRAS</LABEL_COL>
+   </ROW>
+   <ROW num="2">
+      <KEY_COL>1</KEY_COL>
+      <VALUE_COL>CC</VALUE_COL>
+      <LABEL_COL>CENTIMETRO CUBICO</LABEL_COL>
+   </ROW>
+   <ROW num="3">
+      <KEY_COL>2</KEY_COL>
+      <VALUE_COL>LB</VALUE_COL>
+      <LABEL_COL>LIBRAS</LABEL_COL>
+   </ROW>
+   <ROW num="4">
+      <KEY_COL>2</KEY_COL>
+      <VALUE_COL>OZ</VALUE_COL>
+      <LABEL_COL>ONZAS</LABEL_COL>
+   </ROW>
+   <ROW num="5">
+      <KEY_COL>3</KEY_COL>
+      <VALUE_COL>PIE</VALUE_COL>
+      <LABEL_COL>PIE</LABEL_COL>
+   </ROW>
+</ROWSET>

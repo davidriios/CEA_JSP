@@ -1,0 +1,7 @@
+
+
+#debug for erro set true
+debug=true
+
+#start tls for smtp connection
+starttls=true

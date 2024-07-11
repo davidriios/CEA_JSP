@@ -1,0 +1,62 @@
+/* CELLBYTE CSS FOR EXPEDIENTE V3.0 */
+
+
+/*
+/* DONE BY. EDUARDO.B@ISSI-PANAMA.COM */
+
+
+/*
+/* WWW.CELBYTE.CO | WWW.ISSI-PANAMA.COM */
+
+
+/*
+/*
+/*
+/*CUSTOM.CSS*/
+
+
+/* ESTE ARCHIVO CONTIENE SOLO CLASS MODIFICADOS DE BOOTSTRAP
+   ES DECIR SOLO SE COLOCARAN AQUI LOS ESTILOS SOBRE ESCRITOS DE BOOTSTRAP.CSS /*
+/* NO AGREGAR ESTILOS ECHOS POR CELLBYTE AQUI, SOLO AGREGAR MODIFICADOS DE BOOTSTRAP */
+
+body {
+    background-color: #f7f7f7 !important;
+    padding-top: 75px;
+    color: #242a30;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.page-title {
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.page-title .title_left {
+    width: 100%;
+    float: left;
+}
+
+.page-title .title_left h3 {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.table-wrapper {
+    width: 100%;
+    height: 150px;
+    overflow: auto;
+    background-color: #fff !important;
+    margin-bottom: 0px;
+    z-index: 1800;
+}
+
+.nav-tabs>li>a {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}

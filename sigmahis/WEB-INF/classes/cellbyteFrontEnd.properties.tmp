@@ -1,0 +1,9 @@
+# Cellbyte FrontEnd ResourceBundle properties file
+
+#
+# Provide an PATH to CSS and color scheme for company specific installation
+#
+css.file=custom_log.css
+login.logo.path=css/bootstrap/img/_big_color.png
+app.company.logo=images/lgc.png
+

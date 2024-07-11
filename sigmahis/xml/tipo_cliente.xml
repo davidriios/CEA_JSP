@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding='ISO-8859-1'?>
+<ROWSET>
+   <ROW num="1">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ASEGURADOS</LABEL_COL>
+      <KEY_COL>E</KEY_COL>
+      <TITLE_COL>EMPR</TITLE_COL>
+   </ROW>
+</ROWSET>

@@ -1,0 +1,7 @@
+#####################################################################
+#                             E L A B O                             #
+#####################################################################
+#WEB-SERVICE HOST
+host=[host_name[/context]]
+#RESULT DELIMETER (DEFAULT ",")
+delimeter=[any character]

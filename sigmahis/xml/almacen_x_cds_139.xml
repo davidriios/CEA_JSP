@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding='ISO-8859-1'?>
+<ROWSET>
+   <ROW num="1">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - ALMACEN C.GENERAL</LABEL_COL>
+      <KEY_COL>1--2</KEY_COL>
+   </ROW>
+   <ROW num="2">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - ALMACEN C.GENERAL</LABEL_COL>
+      <KEY_COL>1--1</KEY_COL>
+   </ROW>
+   <ROW num="3">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - FARMACIA EXTERNA</LABEL_COL>
+      <KEY_COL>1-12</KEY_COL>
+   </ROW>
+   <ROW num="4">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - ALMACEN C.GENERAL</LABEL_COL>
+      <KEY_COL>1-12</KEY_COL>
+   </ROW>
+   <ROW num="5">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - FARMACIA EXTERNA</LABEL_COL>
+      <KEY_COL>1-14</KEY_COL>
+   </ROW>
+   <ROW num="6">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - FARMACIA EXTERNA</LABEL_COL>
+      <KEY_COL>1-42</KEY_COL>
+   </ROW>
+   <ROW num="7">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - ALMACEN C.GENERAL</LABEL_COL>
+      <KEY_COL>1-50</KEY_COL>
+   </ROW>
+   <ROW num="8">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - ALMACEN C.GENERAL</LABEL_COL>
+      <KEY_COL>1-55</KEY_COL>
+   </ROW>
+   <ROW num="9">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - FARMACIA EXTERNA</LABEL_COL>
+      <KEY_COL>1-75</KEY_COL>
+   </ROW>
+</ROWSET>

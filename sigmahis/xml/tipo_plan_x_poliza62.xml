@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding='ISO-8859-1'?>
+<ROWSET>
+   <ROW num="1">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>BENEFICIOS A COLABORADORES</LABEL_COL>
+      <KEY_COL>7</KEY_COL>
+   </ROW>
+   <ROW num="2">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>JUBILADO</LABEL_COL>
+      <KEY_COL>6</KEY_COL>
+   </ROW>
+   <ROW num="3">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>MEDICOS DE CMML</LABEL_COL>
+      <KEY_COL>4</KEY_COL>
+   </ROW>
+   <ROW num="4">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>PROPUESTO ASEGURADO</LABEL_COL>
+      <KEY_COL>3</KEY_COL>
+   </ROW>
+   <ROW num="5">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>TRADICIONAL</LABEL_COL>
+      <KEY_COL>1</KEY_COL>
+   </ROW>
+   <ROW num="6">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>TRADICIONAL</LABEL_COL>
+      <KEY_COL>5</KEY_COL>
+   </ROW>
+   <ROW num="7">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>PERDIEM</LABEL_COL>
+      <KEY_COL>1</KEY_COL>
+   </ROW>
+   <ROW num="8">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>PREFERENCIAL</LABEL_COL>
+      <KEY_COL>1</KEY_COL>
+   </ROW>
+   <ROW num="9">
+      <VALUE_COL>4</VALUE_COL>
+      <LABEL_COL>ACCIDENTE</LABEL_COL>
+      <KEY_COL>1</KEY_COL>
+   </ROW>
+</ROWSET>

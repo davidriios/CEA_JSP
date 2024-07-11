@@ -1,0 +1,1 @@
+<script>if(document.all)document.all.loadingmsg.style.visibility='hidden';else if(document.layers)document.loadingmsg.visibility='hidden';else if(document.getElementById)document.getElementById('loadingmsg').style.visibility='hidden';</script>

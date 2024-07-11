@@ -1,0 +1,34 @@
+# Paths ResourceBundle properties file
+
+#
+# Provide an ABSOLUTE PATH below
+#
+root=
+images=/images
+companyimages=/images/company
+fotosimages=/images/fotos
+articulosimage=/images/articulos
+tarifaimage=/images/tarifas
+docs=/docs
+docs.cxc=/docs/cxc
+docs.cxp=/docs/cxp
+docs.pdtfiles=/docs/pdtfiles
+docs.axa837=/docs/axa837
+docs.files_axa=/docs/files_axa
+docs.planilla=/docs/planilla
+expedientedocs=/docs/expediente
+pdfdocs=/pdfdocs
+xml=/xml
+scanned=/docs/scanned
+docs.conta=/docs/conta
+docs.asientos=/docs/asientos
+docs.superinten=/docs/superinten
+
+avatars=/images/avatars
+
+docs.files_aseg=/docs/files_aseg      
+docs.pagosAseg=/docs/pagosAseg
+
+#
+# check log4j.properties also
+#

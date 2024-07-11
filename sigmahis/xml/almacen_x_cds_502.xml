@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding='ISO-8859-1'?>
+<ROWSET>
+   <ROW num="1">
+      <VALUE_COL>7</VALUE_COL>
+      <LABEL_COL>7 - ALMACEN ENDOSCOPIA</LABEL_COL>
+      <KEY_COL>1-5</KEY_COL>
+   </ROW>
+   <ROW num="2">
+      <VALUE_COL>7</VALUE_COL>
+      <LABEL_COL>7 - ALMACEN ENDOSCOPIA</LABEL_COL>
+      <KEY_COL>1-6</KEY_COL>
+   </ROW>
+   <ROW num="3">
+      <VALUE_COL>5</VALUE_COL>
+      <LABEL_COL>5 - ALMACEN URGENCIAS</LABEL_COL>
+      <KEY_COL>1-7</KEY_COL>
+   </ROW>
+</ROWSET>

@@ -1,0 +1,42 @@
+
+Usando explorer 64 bits
+
+
+1. Adimisión:
+  a- ok Edición, no me muestra información importante (de donde saca Inf Importante), porque lo que puse en el formulario de admision no sale
+  b- desde el icono de la lupa, me abre la pantalla recortada y no muestra completo los comenatrios en rojo arriba
+  c- en las impresiones no encuentro la indicacion de riesgo de caida (figura) debe estar en la boleta y dos consentimientos
+  d- habilitarme en condicion de paciente el botoncito para informacion explicativa
+
+  
+  e- Desde el icono de Honorarios Medicos, manda error al guardar
+  f- Desde icono de Requisicion materiales para paciente, manda error al guardar
+  g- Faltan iconos de solicitud de afitreon y de equipos comodato
+  
+  
+  
+
+2. Expediente
+
+ 
+ 
+  c-[Ok] Seccion de antecedentes de transfusion, no guarda el documento asociado, ni en la impresion.
+  
+  e- dentro de expediente la alerta de Alergia aparece azul y luego rojo intermitentemente cambiando de color
+  f. [OK] Antecedentes traumáticos, manda error al imprimir
+  g- [Funciona OK en mi PC]Evolucion respiratoria, no muestra campos del formulario para rellenar.
+     Mantenimiento: Parametros Evolucion Respiratoria, manda error al cargar
+  h. [OK]Reporte de Hoja de control de diabetes, no imprime registros guardados
+  i- Informe de Broncoscopia, citoscopia, endoscopia no mustra el documento asociado en la pestaña base.
+  j- Nota de Enfermera de Hemodialisis:  error al poner boton de AGREGAR
+  k. O/M Esquema de Insulina, despues que graba me cambia a la pagina de list de expediente (mantiene la seccion abierta)
+  l- O/M Medicamentos, despues que graba me cambia a la pagina de list de expediente (mantiene la seccion abierta)
+                       opcion "Ver med activos" no me permite seleccionar para omitir y me pide seleccionar uno al menos. (NO ES MEDICO)
+  m- O/M Tratamientos, despues que graba me cambia a la pagina de list de expediente (mantiene la seccion abierta)
+  n- O/M Varias, despues que graba me cambia a la pagina de list de expediente (mantiene la seccion abierta)
+  o- Datos de Salida: agregar impresion de recetas y carta de traslado, Incapacidad/constancia   Segun especificaciones.    AJUSTAR
+  p- Plan de salida:  guarda diagnsotico de salida, pero luego no lo veo
+                      guarda dietas, pero luego no las veo
+  q- [OK] Procedimientos invasivos: guarda pero no imprime
+
+  

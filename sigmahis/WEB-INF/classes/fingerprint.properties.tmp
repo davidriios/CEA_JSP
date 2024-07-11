@@ -1,0 +1,17 @@
+# Fingerprint ResourceBundle properties file
+
+# Available types
+types=USR,PAC,EMP
+
+# USERS
+sql.usr=select z.capture, z.owner_id, (select name from tbl_sec_users where user_id = z.owner_id) as owner_name, (select user_name from tbl_sec_users where user_id = z.owner_id) as xtra1 from tbl_bio_fingerprint z where z.capture_type = 'USR'
+# ADDITIONAL FILTERS WITH DYNAMIC PARAMETER
+sql.usr.login.filter=and exists (select null from tbl_sec_users where user_id = z.owner_id and user_name = '@@refer')
+# FILTER'S PARAMETER REQUIRED (Y OR N)
+usr.login.refer.required=[y|n]
+
+# PATIENTS
+sql.pac=select z.capture, z.owner_id, (select nombre_paciente from vw_adm_paciente where pac_id = z.owner_id) as owner_name, (select id_paciente from vw_adm_paciente where pac_id = z.owner_id) as xtra1, (select to_char(fecha_nacimiento,'dd/mm/yyyy') from vw_adm_paciente where pac_id = z.owner_id) as xtra2, /*(select edad||'(a) '||edad_mes||'(m) '||edad_dias||'(d)' from vw_adm_paciente where pac_id = z.owner_id)*/' ' as xtra3, (select sexo from vw_adm_paciente where pac_id = z.owner_id) as xtra4 from tbl_bio_fingerprint z where z.capture_type = 'PAC'
+
+# EMPLOYEES
+sql.emp=select z.capture, z.owner_id, (select nombre_empleado from vw_pla_empleado where emp_id = z.owner_id) as owner_name, (select cedula1 from vw_pla_empleado where emp_id = z.owner_id) as xtra1, (select to_char(fecha_nacimiento,'dd/mm/yyyy') from vw_pla_empleado where emp_id = z.owner_id) as xtra2, ' ' as xtra3, (select sexo from vw_pla_empleado where emp_id = z.owner_id) as xtra4 from tbl_bio_fingerprint z where z.capture_type = 'EMP'

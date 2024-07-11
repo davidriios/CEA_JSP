@@ -1,0 +1,24 @@
+# issi_mail ResourceBundle properties file
+
+smtphost=smtpout.secureserver.net
+
+smtpuser=user@mail_host.com
+
+smtppassword=mail_password
+
+smtpfrom=user@mail_host.com
+
+#0= no autenticar; 1 = autenticar user y pass.
+smtpuseAuth=1
+
+smtpport=25
+
+#custom time interval (in minutes) to run thread
+time_interval=2
+
+
+#debug for erro set true
+debug=true
+
+#start tls for smtp connection
+starttls=true

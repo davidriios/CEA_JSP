@@ -1,0 +1,19 @@
+# Connections ResourceBundle properties file
+
+# ORACLE DRIVER
+db_driver=oracle.jdbc.OracleDriver
+
+# ORACLE URL CONNECTIONS (IF MORE THAN ONE SEPARATED BY COMA)
+db_url=jdbc\:oracle\:thin\:@192.168.1.0\:1521\:orcl,jdbc\:oracle\:thin\:@192.168.1.1\:1521\:orcl
+
+# ENCRYPTED USER NAME
+db_username=USER_HERE
+
+# ENCRYPTED PASSWORD
+db_password=PASSWORD_HERE
+
+# MAXIMUM CONNECTION RETRIES
+max_retry=3
+
+#WORKING SCHEMA NAME (LEAVE BLANK IF SAME AS USER)
+schema=SCHEMA_TO_USE

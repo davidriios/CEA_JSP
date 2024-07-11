@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding='ISO-8859-1'?>
+<ROWSET>
+   <ROW num="1">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>AMBULATORIO (AMB)</LABEL_COL>
+      <KEY_COL>14</KEY_COL>
+      <TITLE_COL>3</TITLE_COL>
+   </ROW>
+   <ROW num="2">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>AMBULATORIO (AMB)</LABEL_COL>
+      <KEY_COL>8</KEY_COL>
+      <TITLE_COL>3</TITLE_COL>
+   </ROW>
+   <ROW num="3">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>AMBULATORIO (AMB)</LABEL_COL>
+      <KEY_COL>9</KEY_COL>
+      <TITLE_COL>3</TITLE_COL>
+   </ROW>
+   <ROW num="4">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>AMBULATORIO (AMB)</LABEL_COL>
+      <KEY_COL>10</KEY_COL>
+      <TITLE_COL>3</TITLE_COL>
+   </ROW>
+   <ROW num="5">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>AMBULATORIO (AMB)</LABEL_COL>
+      <KEY_COL>6</KEY_COL>
+      <TITLE_COL>3</TITLE_COL>
+   </ROW>
+   <ROW num="6">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>AMBULATORIO (AMB)</LABEL_COL>
+      <KEY_COL>5</KEY_COL>
+      <TITLE_COL>3</TITLE_COL>
+   </ROW>
+   <ROW num="7">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>AMBULATORIO (AMB)</LABEL_COL>
+      <KEY_COL>31</KEY_COL>
+      <TITLE_COL>3</TITLE_COL>
+   </ROW>
+   <ROW num="8">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>HOSPITALIZADO (HOS)</LABEL_COL>
+      <KEY_COL>20</KEY_COL>
+      <TITLE_COL>1</TITLE_COL>
+   </ROW>
+   <ROW num="9">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>HOSPITALIZADO (HOS)</LABEL_COL>
+      <KEY_COL>14</KEY_COL>
+      <TITLE_COL>1</TITLE_COL>
+   </ROW>
+   <ROW num="10">
+      <VALUE_COL>4</VALUE_COL>
+      <LABEL_COL>REFERIDO (OPD)</LABEL_COL>
+      <KEY_COL>7</KEY_COL>
+      <TITLE_COL>4</TITLE_COL>
+   </ROW>
+   <ROW num="11">
+      <VALUE_COL>4</VALUE_COL>
+      <LABEL_COL>REFERIDO (OPD)</LABEL_COL>
+      <KEY_COL>14</KEY_COL>
+      <TITLE_COL>4</TITLE_COL>
+   </ROW>
+   <ROW num="12">
+      <VALUE_COL>4</VALUE_COL>
+      <LABEL_COL>REFERIDO (OPD)</LABEL_COL>
+      <KEY_COL>9</KEY_COL>
+      <TITLE_COL>4</TITLE_COL>
+   </ROW>
+   <ROW num="13">
+      <VALUE_COL>4</VALUE_COL>
+      <LABEL_COL>REFERIDO (OPD)</LABEL_COL>
+      <KEY_COL>10</KEY_COL>
+      <TITLE_COL>4</TITLE_COL>
+   </ROW>
+   <ROW num="14">
+      <VALUE_COL>4</VALUE_COL>
+      <LABEL_COL>REFERIDO (OPD)</LABEL_COL>
+      <KEY_COL>31</KEY_COL>
+      <TITLE_COL>4</TITLE_COL>
+   </ROW>
+   <ROW num="15">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>URGENCIAS (URG)</LABEL_COL>
+      <KEY_COL>14</KEY_COL>
+      <TITLE_COL>2</TITLE_COL>
+   </ROW>
+   <ROW num="16">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>URGENCIAS (URG)</LABEL_COL>
+      <KEY_COL>7</KEY_COL>
+      <TITLE_COL>2</TITLE_COL>
+   </ROW>
+</ROWSET>

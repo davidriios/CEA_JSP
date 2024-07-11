@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding='ISO-8859-1'?>
+<ROWSET>
+   <ROW num="1">
+      <VALUE_COL>3</VALUE_COL>
+      <LABEL_COL>AMBULATORIO (AMB)</LABEL_COL>
+      <KEY_COL>9</KEY_COL>
+      <TITLE_COL>3</TITLE_COL>
+   </ROW>
+   <ROW num="2">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>HOSPITALIZADO (HOS)</LABEL_COL>
+      <KEY_COL>20</KEY_COL>
+      <TITLE_COL>1</TITLE_COL>
+   </ROW>
+</ROWSET>

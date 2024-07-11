@@ -1,0 +1,82 @@
+@media screen and (-webkit-min-device-pixel-ratio:0) {  /*safari and chrome*/
+    select {
+        height:25px;
+        line-height:25px;
+        font-size: 14px;
+        background:#f4f4f4;
+    } 
+}
+select::-moz-focus-inner { /*Remove button padding in FF*/ 
+    border: 0;
+    padding: 0;
+}
+@-moz-document url-prefix() { /* targets Firefox only */
+    select {
+        padding: 5px 0!important;
+        font-size: 14px!important;
+    }
+}
+
+.btn_red_link {
+ font-size: 16px;
+  background-color:#203038;
+  border-bottom: 0;
+  margin-left: 10px;
+}
+.btn_red_link:disabled { background-color:#eeeeee;}
+._selected{background-color:#e62727;}
+.btn_red_link:hover { background-color:#e62727;}
+
+.TextHeader{}
+.CellbyteBtn{font-size: 16px;}
+.Text13{font-size: 13px;
+    font-weight: bolder; }
+
+input[type=text], input[type=password] {
+height: 20px;
+font-weight: bolder;
+}
+.redBlack{background-color:#FF4000 !important;color:#000 !important;}
+.redWhite{background-color:#FF4000 !important;color:#fff !important;}
+
+.greenBlack{background-color:#00FF00 !important;color:#000 !important;}
+.greenWhite{background-color:#00FF00 !important;color:#fff !important;}
+
+.yellowBlack{background-color:#FFFF00 !important;color:#000 !important;}
+.yellowWhite{background-color:#FFFF00 !important;color:#fff !important;}
+
+.blueBlack{background-color:#0101DF !important;color:#000 !important;}
+.blueWhite{background-color:#0101DF !important;color:#fff !important;}
+
+.pinkBlack{background-color:#F781D8 !important;color:#000 !important;}
+.pinkWhite{background-color:#F781D8 !important;color:#fff !important;}
+
+
+.keypad-popup.flatKeypad { background: #dfd; border: 1px solid #8c8; 
+    -moz-border-radius: 0.25em; -webkit-border-radius: 0.25em; } 
+.flatKeypad .keypad-key, .flatKeypad .keypad-special { 
+    width: 1.5em; border: 1px solid #8c8; -moz-border-radius: 0.25em; 
+    -webkit-border-radius: 0.25em; color: #000; background: #cfc; } 
+.flatKeypad .keypad-key-down { background: #8c8; } 
+.flatKeypad .keypad-clear { letter-spacing: -3px; text-align: left; } 
+.flatKeypad .keypad-space { width: 1.5em; }
+
+.keypad-popup.midnightKeypad { background: #10085a; } 
+.midnightKeypad .keypad-key, .midnightKeypad .keypad-special { 
+    width: 38px; height: 38px; padding: 5px; 
+    background: url(img/midnight.gif) no-repeat; border: none; 
+    color: #fff; font-size: 1.5em; font-weight: bold; } 
+.midnightKeypad .keypad-key-down { padding: 7px 3px 3px 7px; 
+    background: url(img/midnight.gif) no-repeat -38px 0px; } 
+.midnightKeypad .keypad-space { width: 38px; height: 8px; }
+.lb-sm {
+  font-size: 12px;
+}
+
+.lb-md {
+  font-size: 16px;
+}
+
+.lb-lg {
+  font-size: 20px;
+}

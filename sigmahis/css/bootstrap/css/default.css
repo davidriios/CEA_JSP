@@ -1,0 +1,871 @@
+/* CELLBYTE CSS FOR EXPEDIENTE V3.0 */
+
+
+/*
+/* DONE BY. EDUARDO.B@ISSI-PANAMA.COM */
+
+
+/*
+/* WWW.CELBYTE.CO | WWW.ISSI-PANAMA.COM */
+
+
+/*
+/*
+/*
+/*DEFAULT.CSS*/
+
+
+/* AGREGAR AQUI LOS CLASS HECHOS POR NOSOTROS, FUENTES U OTROS, NO SOBRE ESCRITOS DE BOOTSTRAP*/
+
+
+/* COMIENZO CSS MATERIAL ICONS y EMOJIS FONTWEB */
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/MaterialIcons-Regular.woff2) format('woff2'), url(../fonts/MaterialIcons-Regular.woff) format('woff'), url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "EmojiSymbols";
+    src: url('fonts/EmojiSymbols-Regular.woff') format('woff');
+    text-decoration: none;
+    font-style: normal;
+}
+
+.emj {
+    font-family: "EmojiSymbols";
+    line-height: 1;
+}
+
+
+/* FIN CSS MATERIAL ICONS Y EMOJIS FONTWEB */
+
+
+/* IMPORTANTE */
+
+
+/* ESTOS SON LOS MARGENES USADOS EN LA MAYORIA DE FORMULARIOS Y TABLAS MODIFICAR DESDE AQUI SI ES NECESARIO */
+
+.body-form {
+    background-color: #e9e9e9 !important;
+    padding-top: 55px;
+    color: #242a30;
+    margin-bottom: 30px;
+}
+
+.body-formtab {
+    background-color: #e9e9e9 !important;
+    padding-top: 105px;
+    color: #242a30;
+    margin-bottom: 30px;
+}
+
+.body-forminside {
+    background-color: #e9e9e9 !important;
+    padding-top: 245px;
+    color: #242a30;
+    margin-bottom: 30px;
+}
+
+.footerform {
+    position: fixed;
+    bottom: -20px;
+    width: 100%;
+}
+
+.headerform {
+    position: fixed;
+    height: 25px;
+    top: 0;
+    width: 100%;
+    background-color: #fff !important;
+    z-index: 1500;
+}
+
+.headerform2 {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: #fff !important;
+    border-bottom: 8px solid #e5e5e5;
+    z-index: 1500;
+}
+
+.bodycontenido {
+    margin: 10px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 10px 0px;
+    display: block;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+
+/* COMIENZO CSS BARRA PACIENTES */
+
+.secondbar {
+    /* COLOR Y PROPIEDADES DE BARRA DE PACIENTE */
+    width: auto;
+    font-size: 14px;
+    background: #37474f;
+    padding-left: 20px;
+    padding-top: 2px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 28px;
+    color: #fff;
+    border-bottom: 0px solid #73879c !important;
+}
+
+.dropdown-toggleuser:hover {
+    background-color: #37474f!important;
+    border-left: 0 !important;
+    text-decoration: none !important;
+}
+
+.dropdown-toggleuser:link {
+    background-color: #37474f!important;
+    border-left: 0 !important;
+    text-decoration: none !important;
+}
+
+.dropdown-toggleuser:visited {
+    background-color: transparent!important;
+    border-left: 0 !important;
+    text-decoration: none !important;
+}
+
+.dropdown-toggleuser:active {
+    background-color: transparent!important;
+    border-left: 0 !important;
+    text-decoration: none !important;
+}
+
+.table-user-in {
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 1px;
+    position: fixed;
+}
+
+
+/* FIN CSS BARRA PACIENTES */
+
+
+/* COMIENZO CSS BARRA DE NAVEGACION Y ENLACES */
+
+span.icon {
+    font-family: FontAwesome !important;
+}
+
+.custom-navbar {
+    background-color: #242a30 !important;
+    border-color: #2d353c !important;
+    border: 0px !important;
+    color: #fff !important;
+    margin-bottom: 0 !important;
+    font-size: 13px !important;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 5px 15px;
+    font-size: 18px;
+    line-height: 20px
+}
+
+.navbar-brand:focus, .navbar-brand:hover {
+    text-decoration: none
+}
+
+.navbar-brand>img {
+    display: block
+}
+
+.white-text {
+    color: whitesmoke !important;
+}
+
+.dropdown-toggle:active, .open .dropdown-toggle:active {
+    background: #37474f !important;
+    color: #fff !important;
+}
+
+.dropdown-toggle:hover, .open .dropdown-toggle:hover {
+    background: #37474f !important;
+    color: #fff !important;
+}
+
+.dropdown-toggle {
+    background-color: #242a30 !important;
+    width: auto !important;
+}
+
+.dropdown-toggle:hover {
+    background-color: #37474f !important;
+}
+
+.dropdown-menu .d2 {
+    background-color: hover: #2d353c !important;
+}
+
+.dropdown-menu {
+    background-color: #242a30 !important;
+    border: 0 !important;
+    border-radius: 2px !important;
+}
+
+.navbar-toggle:hover {
+    background-color: transparent !important;
+    color: #fff !important;
+}
+
+.navbar-toggle:link {
+    background-color: transparent;
+    color: #fff !important;
+}
+
+.navbar-toggle:visited {
+    background-color: transparent;
+    color: #fff !important;
+}
+
+.content {
+    width: 100%;
+    color: #000;
+}
+
+
+/* FIN CSS BARRA DE NAVEGACION Y ENLACES */
+
+
+/* CAMBIOS DE ICONOS PROPIOS PARA FONTAWESOME Y MATERIAL ICON */
+
+.fa-printico {
+    font-size: 20px;
+    margin: 0 !important;
+    vertical-align: text-bottom;
+}
+
+fa-20 {
+    font-size: 15px;
+}
+
+.fa-18tab {
+    font-size: 22px;
+    margin: 0 !important;
+}
+
+.fa-18 {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.fa-18-user {
+    font-size: 13px;
+    margin-right: 1px;
+}
+
+.fa-24 {
+    font-size: 24px;
+}
+
+.fa-36 {
+    font-size: 36px;
+}
+
+.fa-48 {
+    font-size: 48px;
+}
+
+.fa-64 {
+    font-size: 64px;
+}
+
+.fa-128 {
+    font-size: 128px;
+}
+
+.fa-256 {
+    font-size: 256px;
+}
+
+.fa-red {
+    color: #ea6253;
+}
+
+.fa-blue {
+    color: #242a30;
+}
+
+.fa-white {
+    color: white;
+}
+
+.fa-black {
+    color: black;
+}
+
+.fa-grey {
+    color: #3b3b3b;
+}
+
+.fa-bg-red {
+    background-color: #ff0000;
+}
+
+.fa-bg-blue {
+    background-color: #2a3f54;
+}
+
+.fa-bg-bluecheck {
+    background-color: #73879c;
+}
+
+.fa-bg-white {
+    background-color: white;
+}
+
+.fa-bg-black {
+    background-color: black;
+}
+
+.fa-bg-grey {
+    background-color: #3b3b3b;
+}
+
+.fa-bg-green {
+    background-color: green;
+}
+
+.fa-grey-in {
+    color: #a9a9a9;
+    margin-bottom: 0px;
+}
+
+.fa-stack-2x {
+    font-size: 20px;
+    left: 15px;
+    top: 25px;
+    position: absolute;
+    float: inherit;
+}
+
+.fa-stack-3x {
+    font-size: 20px;
+    right: 45px;
+    top: 25px;
+    position: absolute;
+    float: inherit;
+}
+
+.fa-stack-4x {
+    font-size: 20px;
+    left: 45px;
+    top: 25px;
+    position: absolute;
+    float: inherit;
+}
+
+.fa-stack-5x {
+    font-size: 20px;
+    left: 26px;
+    top: 4px;
+    position: absolute;
+    float: inherit;
+}
+
+.fa-toggle {
+    font-size: 20px;
+    background-color: transparent !important;
+}
+
+.fa-panel-toggle {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none !important;
+    background-color: transparent !important;
+}
+
+
+/*ESTE ES PARA ICONOS DE ESCALA DE DOLOR*/
+
+.fa-dolor {
+    font-size: 35px;
+    margin: 0 !important;
+}
+
+
+/* FIN CAMBIOS DE ICONOS PROPIOS PARA FONTAWESOME Y MATERIAL ICON */
+
+
+/* ESTE ES EL ESTILO DE LA MEDALLA ROJA DE NOTIFICACION DE MENU PRINCIPAL */
+
+.badge-notify {
+    background: #dd3333 !important;
+    position: absolute;
+    top: 4px;
+    left: 1px;
+    border-radius: 350px !important;
+    font-size: 10px;
+    color: #fff !important;
+}
+
+
+/*FINALIZA ESTILO DE MEDALLA */
+
+
+/*INICIO BARRA DATOS DE PACIENTE*/
+
+.panel-default-user {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border: 0;
+}
+
+.panel-heading-user {
+    height: 30px;
+    background-color: #2d353c;
+    color: #fff;
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.panel-title-user {
+    font-size: 14px;
+    margin-top: 0px;
+}
+
+.panel-heading-user:hover {
+    height: 30px;
+    background-color: #37474f;
+    font-size: 10px !important;
+}
+
+.panel-heading-user:active {
+    height: 30px;
+    background-color: #242a30;
+    font-size: 10px !important;
+}
+
+.panel-heading-user-nav {
+    height: 25px;
+    background-color: #37474f;
+    font-size: 10px !important;
+}
+
+.panel-heading-user-nav:hover {
+    height: 25px;
+    background-color: #37474f;
+}
+
+.panel-user-inside {
+    background-color: #2d353c;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 5px !important;
+    color: #333;
+}
+
+a.user:link, a.test:visited, a.test:active {
+    text-decoration: none !important;
+    background-color: transparent !important;
+    background: none !important;
+    border-left: 0px !important;
+    color: #fff !important
+}
+
+a.user:hover {
+    border-left: 0px !important;
+    background-color: none !important;
+}
+
+
+/* La mejor opcion para cambiar iconos al hacer click*/
+
+a[aria-expanded=true] .fa-folder {
+    display: none;
+}
+
+a[aria-expanded=false] .fa-folder-open {
+    display: none;
+}
+
+
+/* FIN BARRA DATOS DE PACIENTE*/
+
+
+/* CLASS PARA LAS TABLAS */
+
+.table-responsive-blank {
+    border-radius: 0px;
+    border: 0 !important;
+    margin-bottom: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bg-headtabla {
+    background-color: #2d353c !important;
+    color: #fff;
+}
+
+.bg-headtabla2 {
+    background-color: #37474f !important;
+    color: #fff;
+}
+
+.bg-headtablawhite {
+    background-color: #fff !important;
+}
+
+.table-responsive {
+    border-radius: 0px;
+    border: 0px solid #eeeeee;
+    margin-bottom: 18px;
+    color: #242a30 !important;
+}
+
+.table-custom-1 {
+    text-align: right !important;
+    border-bottom: 1px #e5e5e5 solid !important;
+    margin-bottom: 0px;
+}
+
+.table-custom-2 {
+    text-align: right !important;
+    margin-bottom: 0px;
+}
+
+.table-responsive>.table {
+    margin-bottom: 0;
+}
+
+.table-responsive>.table-bordered {
+    border: 0;
+}
+
+.table-responsive>.table-bordered>thead>tr>th:first-child, .table-responsive>.table-bordered>tbody>tr>th:first-child, .table-responsive>.table-bordered>tfoot>tr>th:first-child, .table-responsive>.table-bordered>thead>tr>td:first-child, .table-responsive>.table-bordered>tbody>tr>td:first-child, .table-responsive>.table-bordered>tfoot>tr>td:first-child {
+    border-left: 0;
+}
+
+.table-responsive>.table-bordered>thead>tr>th:last-child, .table-responsive>.table-bordered>tbody>tr>th:last-child, .table-responsive>.table-bordered>tfoot>tr>th:last-child, .table-responsive>.table-bordered>thead>tr>td:last-child, .table-responsive>.table-bordered>tbody>tr>td:last-child, .table-responsive>.table-bordered>tfoot>tr>td:last-child {
+    border-right: 0;
+}
+
+.table-responsive>.table-bordered>tbody>tr:last-child>th, .table-responsive>.table-bordered>tfoot>tr:last-child>th, .table-responsive>.table-bordered>tbody>tr:last-child>td, .table-responsive>.table-bordered>tfoot>tr:last-child>td {
+    border-bottom: 0;
+}
+
+.table-responsive[data-pattern="priority-columns"] {
+    position: relative;
+    width: 100%;
+    margin-bottom: 18px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border-radius: 0px;
+    border: 1px solid #eeeeee;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive[data-pattern="priority-columns"]>.table {
+    margin-bottom: 0;
+}
+
+.table-responsive[data-pattern="priority-columns"]>.table>thead>tr>th, .table-responsive[data-pattern="priority-columns"]>.table>tbody>tr>th, .table-responsive[data-pattern="priority-columns"]>.table>tfoot>tr>th, .table-responsive[data-pattern="priority-columns"]>.table>thead>tr>td, .table-responsive[data-pattern="priority-columns"]>.table>tbody>tr>td, .table-responsive[data-pattern="priority-columns"]>.table>tfoot>tr>td {
+    white-space: nowrap;
+}
+
+.table-responsive[data-pattern="priority-columns"]>.table-bordered {
+    border: 0;
+}
+
+.table-responsive[data-pattern="priority-columns"]>.table-bordered>thead>tr>th:first-child, .table-responsive[data-pattern="priority-columns"]>.table-bordered>tbody>tr>th:first-child, .table-responsive[data-pattern="priority-columns"]>.table-bordered>tfoot>tr>th:first-child, .table-responsive[data-pattern="priority-columns"]>.table-bordered>thead>tr>td:first-child, .table-responsive[data-pattern="priority-columns"]>.table-bordered>tbody>tr>td:first-child, .table-responsive[data-pattern="priority-columns"]>.table-bordered>tfoot>tr>td:first-child {
+    border-left: 0;
+}
+
+.table-responsive[data-pattern="priority-columns"]>.table-bordered>thead>tr>th:last-child, .table-responsive[data-pattern="priority-columns"]>.table-bordered>tbody>tr>th:last-child, .table-responsive[data-pattern="priority-columns"]>.table-bordered>tfoot>tr>th:last-child, .table-responsive[data-pattern="priority-columns"]>.table-bordered>thead>tr>td:last-child, .table-responsive[data-pattern="priority-columns"]>.table-bordered>tbody>tr>td:last-child, .table-responsive[data-pattern="priority-columns"]>.table-bordered>tfoot>tr>td:last-child {
+    border-right: 0;
+}
+
+.table-responsive[data-pattern="priority-columns"]>.table-bordered>tbody>tr:last-child>th, .table-responsive[data-pattern="priority-columns"]>.table-bordered>tfoot>tr:last-child>th, .table-responsive[data-pattern="priority-columns"]>.table-bordered>tbody>tr:last-child>td, .table-responsive[data-pattern="priority-columns"]>.table-bordered>tfoot>tr:last-child>td {
+    border-bottom: 0;
+}
+
+
+/* CLASS PARA LAS TABLAS */
+
+
+/*CODIGO CIRCULOS PUPILAS*/
+
+.badge-pupilas {
+    background: #2a3f54;
+    position: inherit;
+    border-radius: 250px !important;
+    top: 4px;
+    left: 0px;
+    font-size: 10px;
+}
+
+.round {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border-color: #34495e;
+    background-color: #242a30;
+    color: #FFF;
+    text-align: center;
+    margin: 3px;
+}
+
+.round.round-sm {
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 10px;
+}
+
+.round.round-sm1 {
+    height: 23px;
+    width: 23px;
+    line-height: 23px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    font-size: 10px;
+}
+
+.round.round-sm2 {
+    height: 26px;
+    width: 26px;
+    line-height: 26px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+.round.round-sm3 {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 250px;
+    font-size: 10px;
+}
+
+.round.round-sm4 {
+    height: 33px;
+    width: 33px;
+    line-height: 33px;
+    -moz-border-radius: 10px;
+    border-radius: 250px;
+    font-size: 10px;
+}
+
+.round.round-sm5 {
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    -moz-border-radius: 10px;
+    border-radius: 250px;
+    font-size: 10px;
+}
+
+.round.round-sm6 {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    -moz-border-radius: 10px;
+    border-radius: 250px;
+    font-size: 10px;
+}
+
+.round.round-sm7 {
+    height: 43px;
+    width: 43px;
+    line-height: 43px;
+    -moz-border-radius: 10px;
+    border-radius: 250px;
+    font-size: 10px;
+}
+
+
+/*CODIGO CIRCULOS PUPILAS*/
+
+
+/* COMIENZO CSS PIE DE PAGINA */
+
+footer {
+    position: fixed;
+    height: 25px;
+    bottom: 0px !important;
+    font-size: 10px;
+    width: 100%;
+    background-color: #ededed;
+    padding-top: 5px;
+    border-top: 1px solid #e5e5e5 !important;
+}
+
+.fa-footer {
+    font-size: 13px;
+    margin-right: 0px;
+}
+
+
+/* FIN CSS PIE DE PAGINA */
+
+
+/* OTROS CAMBIOS */
+
+.marginBottom-0 {
+    margin-bottom: 0;
+}
+
+tr.pull-center th {
+    text-align: center !important;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    vertical-align: middle !important;
+}
+
+
+/* Inicio nuevo formato de tabla remarcadas*/
+
+
+/* INFO!!! PARA QUE FUNCIONEN PERFECTO ES NECESARIO ELIMINAR EL CLASS "table-hover" y "table-stripped" EN LAS TABLAS QUE LO POSEEN */
+
+
+/* estos son los class que no poseen hover*/
+
+.tbg-info {
+    background: #FCF8E3 !important;
+}
+
+.tbg-primary {
+    background: #D9EDF7 !important;
+}
+
+.tbg-success {
+    background: #DFF0D8 !important;
+}
+
+.tbg-error {
+    background: #F2DEDE !important;
+}
+
+.tbg-default {
+    background: #F4F8FB !important;
+}
+
+.tbg-purple {
+    background: #c0bed3 !important;
+}
+
+.tbg-pink {
+    background: #f2e1e6 !important;
+}
+
+
+/* estos son los class que no poseen hover*/
+
+
+/* estos son los class que si poseen hover*/
+
+.tbg-h-info {
+    background: #FCF8E3 !important;
+}
+
+.tbg-h-primary {
+    background: #D9EDF7 !important;
+}
+
+.tbg-h-success {
+    background: #DFF0D8 !important;
+}
+
+.tbg-h-error {
+    background: #F2DEDE !important;
+}
+
+.tbg-h-default {
+    background: #F4F8FB !important;
+}
+
+.tbg-h-purple {
+    background: #c0bed3 !important;
+}
+
+.tbg-h-pink {
+    background: #f2e1e6 !important;
+}
+
+
+/* hover class */
+
+.tbg-h-info:hover {
+    background: #ECF0F1 !important;
+}
+
+.tbg-h-primary:hover {
+    background: #ECF0F1 !important;
+}
+
+.tbg-h-success:hover {
+    background: #ECF0F1 !important;
+}
+
+.tbg-h-error:hover {
+    background: #ECF0F1 !important;
+}
+
+.tbg-h-default:hover {
+    background: #ECF0F1 !important;
+}
+
+.tbg-h-purple:hover {
+    background: #ECF0F1 !important;
+}
+
+.tbg-h-pink:hover {
+    background: #ECF0F1 !important;
+}
+
+
+/* estos son los class que si poseen hover*/
+
+
+/* Fin nuevo formato de tabla remarcadas*/

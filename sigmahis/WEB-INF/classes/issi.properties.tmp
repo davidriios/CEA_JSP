@@ -1,0 +1,315 @@
+# ResourceBundle properties file
+
+#################################################################
+#                                                               #
+#   Author: Jacinto Man Chen                                    #
+#   Date Created: 08 - June - 2007                              #
+#   Edited: E.B. 28 - September -2007                           #
+#################################################################
+
+#taxLabel=I.T.B.M.S.
+taxPercentage=7
+#localCountryId=1
+serverOS=windows
+#windowTitle=Interamerican Software Solution &amp; Integration
+windowTitle=Cellbyte Hospital Managmente Suite
+#icon=issi.ico
+icon=favicon.ico
+#copyrights=COPYRIGHT &copy; 2007 INTERAMERICAN SOFTWARE SOLUTION & INTEGRATION
+copyrights=
+
+#Factura Lines per Page
+#factLinesPerPage=23
+
+#Check Amount Zero validation (Y=Yes, N=No)
+#bnkChkAmount=N
+
+
+#################################################################
+#                         F I L T E R S                         #
+#################################################################
+#AUTHORIZATION FILTER (AuthorizationFilter)
+#Request
+excludeReqFilter=index.jsp,login.jsp,main.jsp,menuitems.jsp,menuRedirect.jsp,logout.jsp,auto_list.jsp,detail.jsp,set_extra_info.jsp,wat.jsp,condicion_actual_paciente.jsp
+#enable multi-language (y=yes, n=no)
+multi.lang=n
+#Response
+excludeRespLoadingBar=index.jsp,menuitems.jsp,auto_list.jsp,detail.jsp,set_extra_info.jsp,wat.jsp,condicion_actual_paciente.jsp,sel_otro_cliente_br.jsp,exp_intervencion_list.jsp
+
+
+#################################################################
+#                     P D F   C R E A T O R                     #
+#################################################################
+#Page No. default font size = 7
+#Page No. default label position X (L=Left, R=Right) = R
+#Page No. default label position Y (B=Bottom, T=Top) = T
+#Page No. Label: XXX=Will be replaced by Current Page No., YYY=Will be replaced by Total Pages
+pageNoLabel=Página XXX de YYY
+
+#################################################################
+#                 LOTES Y FECHA DE VENCIMIENTO                  #
+#################################################################
+#Sistema maneja lote y fecha de vencimiento (Y=Yes, N=No)
+LotExpirationDate=Y
+
+#################################################################
+#                     CODIGO DE ALMACEN SOP                     #
+#################################################################
+almacenSOP=5
+
+#################################################################
+#           CODIGO DE MALETIN DE ANESTESIA GENERICO             #
+#################################################################
+maletinAnestGen=10
+
+#################################################################
+#  C O N V E R S I O N   D E   M O N E D A   A   P A L A B R A  #
+#################################################################
+currencyBillsEn=DOLLAR
+currencyCoinsEn=CENT
+currencyBillsEs=BALBOA
+currencyCoinsEs=CENTAVO
+
+#################################################################
+#                           L O G I N                           #
+#################################################################
+#no attempts validation if 0
+failedAttempts=3
+# Expiration time (in seconds) between generation time and login process
+login.token.expiration=30
+#Aplication Access I=IN-SITU, W=WEB [I|W]
+app.access=I
+#Session Inactivity Timeout (in minutes). Leave blank or zero to use default (30 minutes)
+inactivity.timeout=0
+#Enable Acceptance of Use Policy [Y|N]
+acceptance.use.policy=N
+
+#################################################################
+#                            A J A X                            #
+#################################################################
+#Tiempo Máximo (en milisegundos) permitido para que la solicitud del cliente llegue al servidor
+c2sTimeout=1000
+
+#################################################################
+#                      E X P E D I E N T E                      #
+#################################################################
+#VERSION DEL EXPEDIENTE: 1=Regular, 2=Icon, 3=Expediente 3.0
+expediente.version=1
+expediente.no_copy_paste=N
+
+#################################################################
+#                            C A J A                            #
+#################################################################
+#Para identificar si los recibos son  automaticos (A) ó manual (M)
+cjaTipoRec=A
+# Display system shift segment to specific cashier type (C=Cashier, S=Supervisor, A=Both)
+system.shift=A
+
+#################################################################
+#                   P L A N   M E D I C O                       #
+#################################################################
+#Para identificar si la aplicacion usa plan medico S=Si, N=No
+usaPlanMedico=S
+#################################################################
+#      CARACTERES MINIMOS PARA CODIGO DE BARRA                  #
+#################################################################
+minCharBarCode=4
+#################################################################
+#      CARACTERES MIAXIMO PARA CODIGO DE BARRA                  #
+#################################################################
+maxCharBarCode=50
+#################################################################
+#                         T O O L T I P                         #
+#################################################################
+#shows tooltip on mouse over menu option (y=yes, n=no)
+tooltip.menu=n
+
+#################################################################
+#       IMPRIMIR ORDEN COMPRA EN ESTADO APROBADA SOLAMENTE      #
+#################################################################
+#Para indicar que solo debe aparecer el link para imprimir orden si estan aprobadas. (S=si,N=no)
+validarOc=S
+#################################################################
+#        AGREGAR CARGOS AUTOMATICOS AL SELECCIONAR CAMA         #
+#################################################################
+#Para indicar que se agreguen los cargos automaticos configurados al seleccionar la cama. (S=si,N=no)
+cargarCAut=S
+#################################################################
+#   IMPRIMIR CARGOS AL GUARDAR (SOLO LOS ACTUALES NO TODOS)     #
+#################################################################
+#Para indicar que se genere el reporte de cargos de cada transaccion. (S=si,N=no)
+imprimirCargo=S
+#################################################################
+#                    IMPLEMENTAR PRESUPUESTO                    #
+#################################################################
+#Para indicar si se implementa presupuesto. (S=si,N=no)
+utilizaPres=N
+#################################################################
+#                     EDITAR CODIGO DE BARRA                    #
+#################################################################
+#Para indicar si se permite la edicion de codigo de Barra en modo edit. (S=si,N=no)
+barCodeEdit = N
+#################################################################
+#                      ANFITRION   ESCOLTA                      #
+#################################################################
+#Para indicar si se implementa escolta(N=NO,S=SI) Default S
+escolta = N
+#################################################################
+#                 SOLICITUDES DE EQUIPOS MEDICOS                #
+#################################################################
+#Para indicar si se implementa solicitudes de equipos medicos(Comodatos)(N=NO,S=SI)
+#solEquipos = N
+auto.equipo.comodato = N
+#################################################################
+#CARGOS AUTOMATICOS DE USOS ASIGNADOS A CAMA (MONITORES U OTROS)#
+#################################################################
+#Para indicar si se implementa cargos automaticos de usos asignados a las camas(N=NO,S=SI)
+#usosAutCamas = N
+auto.cama.uso = N
+
+#################################################################
+# MANTENIMIENTO PARA PARAMETROS RESPIRATORIOS #
+#################################################################
+#Para indicar si se implementa los detalles de parámetros respiratorio(N=NO,S=SI)
+auto.pram.resp = N
+
+########################################################################################
+# PARA INDICAR SI SE MUESTRA EN REPORTES Y CONSULTA POR EL CDS DEL DETALLE O ENCABEZADO#
+########################################################################################
+#Para indicar si se utiliza el centro del detalle de cargos o el encabezado S = Utiliza el detalle (N=NO,S=SI)
+cdsDet= S
+
+########################################################################################
+# PARA INDICAR SI SE UTILIZA FERFILES CPT EN SOLICTUDES DE PROCEDIMIENTOS              #
+########################################################################################
+#Para indicar si se implementa perfiles CPT en las solicitudes de Procedimentos S = Se Utiliza (N=NO,S=SI)
+usaPerfilCpt= S
+
+########################################################################################
+# PARA INDICAR SI SE UTILIZA FORMATO DETALLADO O SESUMIDO                              #
+########################################################################################
+#Para indicar si se utiliza formato detallado o rsumido  0 = Detallado linea a linea, 1=resumido una sola linea
+formatFile=1
+########################################################################################
+#           PARA INDICAR SI EN AJUSTES UTILIZA DOCUMENTO FISICO PRE-IMPRESO            #
+########################################################################################
+#Para indicar si en ajustes utiliza documento fisico pre-impreso  S=SI,N=NO
+docAjFisico=N
+########################################################################################
+#           PARA INDICAR SI SE AGREGA EN CIERRE COMPROBANTE U OTRO DETALLE             #
+########################################################################################
+#Para indicar la descripcion a usar en el cierre de caja (OTROS O COMPROBANTES)
+fpOtros=Comprobantes
+########################################################################################
+#           PARA INDICAR SI SE GENERA # DE BOLETA DE HONORARIO AUTOMATICA              #
+########################################################################################
+#Para indicar si se genera no. de boleta de Honorarios automatica (S=SI,N=NO)
+autoBoleta=S
+########################################################################################
+#             PARA INDICAR SI SE GENERA # DE PLACA DE ACTIVOS AUTOMATICA               #
+########################################################################################
+#Para indicar si se genera no. de Placa de activos automatica (S=SI,N=NO)
+autoPlaca=S
+
+########################################################################################
+#    PARA MOSTRAR UN WARNING AL CLIENTE FINAL, SI SU NAV NO CUMPLE CON ESOS PARAMS    #
+########################################################################################
+#Convertiremos este String en un Object Litteral donde las llaves (keys) son los
+# Navegadores (Internet Explorer, Mozilla Firefox y Google Chrome) y los valores son
+# array del rango que soportamos, \: solo estamos escapeamos los 2 puntos, sinon
+# la JVM, los interpretarán de otra manera.
+browser.support='ie'\:[10,11], 'ff'\:[35,36], 'gc'\:[41,42]
+########################################################################################
+#             PARA INDICAR QUE NIVEL DE UNIDADES SE DEBE UTILIZAR                      #
+########################################################################################
+#Para que nivel de unidades se utilizará en cada implementacion (default 2)
+nivelUa=2
+########################################################################################
+#               PARA INDICAR QUE CORREO DE PACIENTE ES REQUERIDO                       #
+########################################################################################
+#Para indicar que correo de paciente en el mantenimiento es requerido (default N)
+correoReq=N
+########################################################################################
+#        PARA INDICAR SI SE MUESTRA O NO EL DETALLE DE LA APLICACION DEL RECIBO        #
+########################################################################################
+#Para indicar si se muestra las facturas aplicadas al recibo  (default N)
+appDet=N
+
+########################################################################################
+# PARA INDICAR SI SE UTILIZA CARGOS POR USOS DE CENTROS EN CITAS                       #
+########################################################################################
+#Para indicar si se implementa cargos automaticos por el uso de las areas en citas, S = Se Utiliza (N=NO,S=SI)
+auto.pram.cita = S
+########################################################################################
+#  PARA INDICAR SI SE UTILIZA SALDO ACTUAL DE LA FACT. O SALDO AL APLICAR LA FACTURA   #
+########################################################################################
+#Para indicar si se muestra el saldo actual de la factura o el saldo al momento de la aplicacion, S = Se Utiliza (N=NO,S=SI)
+saldoFact = N
+########################################################################################
+#  PARA INDICAR SI DEBEN APARECER LA OPCION DE ARCHIVO 837                             #
+########################################################################################
+#Para indicar si debe aparecer la opcion de Generar archivo 837. S = Se Utiliza (N=NO,S=SI)
+file837 = S
+
+########################################################################################
+#                                       COMPRAS                                        #
+########################################################################################
+#Para indicar si se debe mostrar la ventana de cambio de precio (Y|N)
+validarPrecio=Y
+
+########################################################################################
+#                                     FACTURACION                                      #
+########################################################################################
+#Para indicar si debe aparecer la opcion de Paquete en Análisis y Facturación. S = Se Utiliza (N=NO,S=SI)
+paquete=S
+#Para indicar si debe aparecer la opción de Deducible/CoPago en Análisis y Facturación. S=SI, N=NO (DEFAULT)
+deducible=N
+
+########################################################################################
+#  PARA INDICAR EL ANCHO A UTILIZAR PARA EL RECIBO AUTOMATICO                          #
+########################################################################################
+#Por default tiene asignado 0.83
+recCustomWidth=0.83
+########################################################################################
+#  PARA INDICAR SI SE MUESTRA LOS CAMPOS AFECTA INV Y CONTA EN PAGINA DE ARTICULOS     #
+########################################################################################
+#Por default tiene asignado S
+afectaConta=S
+########################################################################################
+#  PARA INDICAR SI SE MUESTRA LOS CAMPOS DE CUENTA EN ALMACEN                          #
+########################################################################################
+#Por default tiene asignado N
+ctaInv=N
+########################################################################################
+#  PARA INDICAR SI SE UTILIZA CONSENTIMIENTOS UNIFICADOS O LA VERSION ANTERIOR         #
+########################################################################################
+#Por default tiene asignado 1
+consetimiento=1
+
+########################################################################################
+#  PARA INDICAR CHARSET QUE SE USARA EN LAS PAGINAS Y EN EL IBIZEscapeChars.forURL     #
+########################################################################################
+#Por default tiene asignado ISO-8859-1
+charset=ISO-8859-1
+########################################################################################
+#  PARA INDICAR SI SE MUESTRA TAB DE CITAS AMBULATORIAS EN PAGINA DE ADMISION          #
+########################################################################################
+#Por default tiene asignado N
+citasAmb=N
+
+########################################################################################
+#  PARA INDICAR SI SE MUESTRA TAB DE CITAS SOP EN PAGINA DE ADMISION                   #
+########################################################################################
+#Por default tiene asignado N
+citasSopAdm=N
+
+########################################################################################
+#                                PREFIJO DE LOS ARCHIVO ASSA                           #
+########################################################################################
+#Por default tiene asignado CB
+assa_file_prefix=CB
+########################################################################################
+#  PARA INDICAR SI SE MUESTRA O NO EL LINK DE IMPRESION FISCAL DESDE LISTA DE ENVIO    #
+########################################################################################
+#Por default tiene asignado ISO-8859-1
+printFiscalCorporacion=N

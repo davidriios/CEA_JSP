@@ -1,0 +1,188 @@
+<%@ page errorPage="../error.jsp"%>
+<%@ page import="java.awt.Color" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.ResourceBundle" %>
+<%@ page import="java.util.Vector" %>
+<%@ page import="issi.admin.CommonDataObject"%>
+<%@ page import="issi.admin.PdfCreator"%>
+<jsp:useBean id="ConMgr" scope="session" class="issi.admin.ConnectionMgr" />
+<jsp:useBean id="SecMgr" scope="session" class="issi.admin.SecurityMgr" />
+<jsp:useBean id="UserDet" scope="session" class="issi.admin.UserDetail" />
+<jsp:useBean id="CmnMgr" scope="page" class="issi.admin.CommonMgr" />
+<jsp:useBean id="SQLMgr" scope="page" class="issi.admin.SQLMgr" />
+<jsp:useBean id="_comp" scope="session" class="issi.admin.Compania" />
+<%@ include file="../common/pdf_header.jsp"%>
+<%
+/**
+==================================================================================
+==================================================================================
+**/
+SecMgr.setConnection(ConMgr);
+if (!SecMgr.checkLogin(session.getId())) throw new Exception("Usted está fuera del sistema. Por favor entre al sistema con su nombre de usuario y clave!!!");
+UserDet = SecMgr.getUserDetails(session.getId());
+session.setAttribute("UserDet",UserDet);
+issi.admin.ISSILogger.setSession(session);
+
+CmnMgr.setConnection(ConMgr);
+SQLMgr.setConnection(ConMgr);
+
+ArrayList al = new ArrayList();
+CommonDataObject cdo = new CommonDataObject();
+
+String sql = "";
+String userName = UserDet.getUserName();
+String banco = request.getParameter("banco");
+String cuenta = request.getParameter("cuenta");
+String nombre = request.getParameter("nombre");
+String anio = request.getParameter("anio");
+
+
+ sql = "SELECT a.banco, a.cuenta_banco cuenta, nvl(a.monto_retenido,0) monto, a.revertido, a.aprobado, a.observacion, decode(a.tipo_movimiento,'DB',nvl(a.monto_retenido,0),0) debito, decode(a.tipo_movimiento,'CR',nvl(a.monto_retenido,0),0) credito, a.consecutivo_ag deposito, to_char(a.f_movimiento,'dd/mm/yyyy') fecha, a.num_cheque cheque, a.consecutivo, a.anio, a.tipo_documento, '[ ' ||a.tipo_documento || ' ] ' ||b.descripcion documento, c.saldo_inicial, c.saldo FROM tbl_con_saldo_bancario_f a, tbl_con_sb_tipo_documento b, tbl_con_sb_saldos c WHERE a.tipo_documento = b.tipo_documento and a.cuenta_banco='"+cuenta+"' and a.banco='"+banco+"' and a.banco = c.cod_banco and a.compania = c.compania and a.cuenta_banco = c.cuenta_banco and c.estatus = 'A' and a.compania="+(String) session.getAttribute("_companyId")+" order by a.consecutivo, a.tipo_documento ";
+
+al = SQLMgr.getDataList(sql);
+System.out.println("sql...="+al.size());
+
+if (request.getMethod().equalsIgnoreCase("GET"))
+{
+	String fecha = CmnMgr.getCurrentDate("dd/mm/yyyy hh12:mi:ss am");
+	String year  = fecha.substring(6, 10);
+	String month = fecha.substring(3, 5);
+	String day   = fecha.substring(0, 2);
+
+	String servletPath = request.getServletPath();
+	String fileName = servletPath.substring(servletPath.lastIndexOf("/") + 1, servletPath.indexOf("."))+"_"+year+"-"+month+"-"+day+"_"+UserDet.getUserId()+"_"+CmnMgr.getCurrentDate("ddmmyyyyhh12missam")+".pdf";
+
+	if (month.equals("01")) month = "january";
+	else if (month.equals("02")) month = "february";
+	else if (month.equals("03")) month = "march";
+	else if (month.equals("04")) month = "april";
+	else if (month.equals("05")) month = "may";
+	else if (month.equals("06")) month = "june";
+	else if (month.equals("07")) month = "july";
+	else if (month.equals("08")) month = "august";
+	else if (month.equals("09")) month = "september";
+	else if (month.equals("10")) month = "october";
+	else if (month.equals("11")) month = "november";
+	else month = "december";
+
+	String companyImageDir = ResourceBundle.getBundle("path").getString("companyimages");
+	String logoPath = companyImageDir+"/"+((_comp.getLogo() != null && !_comp.getLogo().trim().equals(""))?_comp.getLogo():"blank.gif");
+	String statusPath = "";
+	String directory = ResourceBundle.getBundle("path").getString("pdfdocs")+"/";
+	String folderName = servletPath.substring(1, servletPath.indexOf("/",1));
+	if (CmnMgr.createFolder(directory, folderName, year, month).equalsIgnoreCase("0")) throw new Exception("No se puede crear la carpeta! Intente nuevamente.");
+	String redirectFile = "../pdfdocs/"+folderName+"/"+year+"/"+month+"/"+fileName;
+
+	float width  = 72 * 8.5f;//612
+	float height = 72 * 11f;//792
+	boolean isLandscape = false;
+	float leftRightMargin = 9.0f;
+	float topMargin = 13.5f;
+	float bottomMargin = 9.0f;
+	float headerFooterFont = 4f;
+	StringBuffer sbFooter = new StringBuffer();
+	boolean logoMark = true;
+	boolean statusMark = false;
+	String xtraCompanyInfo = "";
+	String title = "CONTABILIDAD";
+	String subtitle = "MOVIMIENTOS BANCARIOS";
+	String xtraSubtitle = "";
+	boolean displayPageNo = true;
+	float pageNoFontSize = 0.0f;//between 7 and 10
+	String pageNoLabel = null;//XXX=Current Page No., YYY=Total Pages
+	String pageNoPoxX = null;//L=Left, R=Right
+	String pageNoPosY = null;//T=Top, B=Bottom
+	int fontSize = 8;
+	float cHeight = 12.0f;
+
+	//PdfCreator pc = new PdfCreator(directory+folderName+"/"+year+"/"+month+"/"+fileName, width, height, isLandscape, sbFooter.toString(), leftRightMargin, topMargin, bottomMargin, headerFooterFont, logoMark, logoPath, statusMark, statusPath, displayPageNo, pageNoFontSize, pageNoLabel, pageNoPoxX, pageNoPosY);
+
+	Vector dHeader = new Vector();
+		
+			dHeader.addElement(".04");
+			dHeader.addElement(".04");
+			dHeader.addElement(".24");
+			dHeader.addElement(".08");
+			dHeader.addElement(".08");
+			dHeader.addElement(".08");
+			dHeader.addElement(".10");
+			dHeader.addElement(".10");
+			dHeader.addElement(".05");
+			dHeader.addElement(".24");
+			
+
+PdfCreator pc = new PdfCreator(directory+folderName+"/"+year+"/"+month+"/"+fileName, width, height, isLandscape, sbFooter.toString(), leftRightMargin, topMargin, bottomMargin, headerFooterFont, logoMark, logoPath, statusMark, statusPath, displayPageNo, pageNoFontSize, pageNoLabel, pageNoPoxX, pageNoPosY);
+
+
+	//table header
+	pc.setNoColumnFixWidth(dHeader);
+	pc.createTable();
+		//first row
+		pdfHeader(pc, _comp, xtraCompanyInfo, title, subtitle, xtraSubtitle, userName, fecha, dHeader.size());
+
+		//second row
+		pc.setFont(7, 1);
+		
+		pc.addBorderCols("CONS.",1);
+		pc.addBorderCols("AÑO",1);
+		pc.addBorderCols("TIPO DE DOCUMENTO",1);
+		pc.addBorderCols("FECHA",1);
+		pc.addBorderCols("DEPOSITO",1);
+		pc.addBorderCols("CHEQUE",1);
+		pc.addBorderCols("DEBITO",2);
+		pc.addBorderCols("CREDITO",2);
+		pc.addBorderCols("APRO.",1);
+		pc.addBorderCols("OBSERVACION",1);
+		
+		pc.setTableHeader(2);//create de table header (2 rows) and add header to the table
+		
+
+	//table body
+	pc.setVAlignment(0);
+	pc.setFont(7, 0);
+	String bank = "";
+	String cta = "";
+	double saldoBanco = 0.00;
+	for (int i=0; i<al.size(); i++)
+	{
+		 cdo = (CommonDataObject) al.get(i);
+
+		if(!bank.equalsIgnoreCase(cdo.getColValue("banco")))
+		{
+		pc.addCols(" ",0,dHeader.size());
+		pc.addCols("Banco : "+nombre,0,dHeader.size());
+		pc.addCols("Cuenta Bancaria : "+cdo.getColValue("cuenta"),0,4);
+		pc.addCols("Saldo Inicial:",0,1);
+		pc.addCols(" "+CmnMgr.getFormattedDecimal(cdo.getColValue("saldo_inicial")),0,5);
+		}
+        pc.addCols(" "+cdo.getColValue("consecutivo"),1,1);
+		pc.addCols(" "+cdo.getColValue("anio"),1,1);
+		pc.addCols(" "+cdo.getColValue("documento"),0,1);
+		pc.addCols(" "+cdo.getColValue("fecha"),1,1);
+		pc.addCols(" "+cdo.getColValue("deposito"),0,1);
+		pc.addCols(" "+cdo.getColValue("cheque"),0,1);
+		pc.addCols(" "+CmnMgr.getFormattedDecimal(cdo.getColValue("debito")), 2,1);
+		pc.addCols(" "+CmnMgr.getFormattedDecimal(cdo.getColValue("credito")), 2,1);
+		pc.addCols(" "+cdo.getColValue("aprobado"),1,1);;
+		pc.addCols(" "+cdo.getColValue("observacion"),0,1);
+		
+		saldoBanco += Double.parseDouble(cdo.getColValue("debito")) - Double.parseDouble(cdo.getColValue("credito"));
+		
+		
+		bank = cdo.getColValue("banco");
+		cta = cdo.getColValue("cuenta");
+		if ((i % 50 == 0) || ((i + 1) == al.size())) pc.flushTableBody(true);
+	} 
+	saldoBanco += Double.parseDouble(cdo.getColValue("saldo_inicial"));
+	pc.addCols(" ",0,dHeader.size());
+	if (al.size() == 0) pc.addCols("No existen registros",1,dHeader.size());
+	else {
+	pc.addCols(" Saldo en Banco:",2,5);
+	pc.addCols(" "+CmnMgr.getFormattedDecimal(saldoBanco),0,5);
+	pc.addCols(al.size()+" Registro(s) en total",0,dHeader.size());
+	}
+	pc.addTable();
+	pc.close();
+	response.sendRedirect(redirectFile);
+}//GET
+%>

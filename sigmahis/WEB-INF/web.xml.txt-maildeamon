@@ -1,0 +1,5 @@
+--linea 12
+	<!-- E M A I L   D E A M O N   L I S T E N E R -->
+	<listener>
+		<listener-class>issi.deamon.MailThreadContext</listener-class>
+	</listener>

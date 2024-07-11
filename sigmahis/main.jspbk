@@ -1,0 +1,58 @@
+<%@ page errorPage="error.jsp"%>
+<jsp:useBean id="ConMgr" scope="session" class="issi.admin.ConnectionMgr" />
+<jsp:useBean id="SecMgr" scope="session" class="issi.admin.SecurityMgr" />
+<jsp:useBean id="UserDet" scope="session" class="issi.admin.UserDetail" />
+<jsp:useBean id="CmnMgr" scope="page" class="issi.admin.CommonMgr" />
+<%
+SecMgr.setConnection(ConMgr);
+if (!SecMgr.checkLogin(session.getId())) throw new Exception("Usted está fuera del sistema. Por favor entre al sistema con su nombre de usuario y clave!!!");
+UserDet = SecMgr.getUserDetails(session.getId());
+session.setAttribute("UserDet",UserDet);
+issi.admin.ISSILogger.setSession(session);
+
+CmnMgr.setConnection(ConMgr);
+
+if (!UserDet.getUserProfile().contains("0")) {
+	if (SecMgr.showPasswordChange(UserDet)) response.sendRedirect(request.getContextPath()+"/admin/user_preferences.jsp?fp=newpass&tab=1");
+}
+
+String msg = request.getParameter("msg");
+if (msg == null) msg = "";
+String furl = request.getParameter("furl");
+if (furl == null) furl = "";
+%>
+<html>
+<head>
+<%@ include file="common/nocache.jsp"%>
+<%@ include file="common/header_param.jsp"%>
+<style type='text/css'>
+@-moz-document url-prefix() {
+	iframe { display: block; }
+}
+</style>
+<!--[if gt IE 8]>
+<style type="text/css">
+	iframe { display: block; }
+</style>
+<![endif]-->
+<script language="javascript">
+document.title=""+document.title;
+var xHeight=0;
+function doAction(){var furl = '<%=furl.replace("|","&")%>';
+if(furl!=''&& furl!='undefined'){ window.frames['content'].location = '<%=request.getContextPath()%>/'+furl;}
+xHeight=objHeight('_tblMainHeader');resizeFrame();/*window.frames['unloadFrame'].location = '<%=request.getContextPath()%>/'+'unloadPageAfter.jsp';*/
+}
+function resizeFrame(){resetFrameHeight(window.frames['content'],xHeight,350,null,8);}
+function closeSession(){abrir_ventana('logout.jsp?exit=yes');}
+jQuery(document).ready(function(){doAction();});
+</script>
+</head>
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<%@ include file="common/header.jsp"%>
+<%@ include file="common/menu_base_main.jsp"%>
+<iframe id="unloadFrame" name="unloadFrame" frameborder="0" width="100%" height="0" src="unloadPage.jsp" style="display:none"></iframe>
+<iframe id="content" name="content" frameborder="0" width="100%" height="500" src="<%=(UserDet.getDefaultPage() == null || UserDet.getDefaultPage().trim().equals(""))?"":UserDet.getDefaultPage()%>"></iframe>
+<%@ include file="common/footer.jsp"%>
+<input type="hidden" id="_winTitle" name="_winTitle" value="<%=java.util.ResourceBundle.getBundle("issi").getString("windowTitle")%>">
+</body>
+</html>

@@ -1,0 +1,1 @@
+<div id="loadingmsg" style="position:absolute; z-index:100; width:99.69%; left:0; top:0; border-width:2; border-style:ridge; background-color:#eeeeee; font-family:Arial, Helvetica, sans-serif; font-weight:bold;" align="center">Loading...<br><img src="<%=request.getContextPath()%>/images/loading-bar.gif"></div>

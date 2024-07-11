@@ -1,0 +1,28 @@
+<?xml version = '1.0' encoding='ISO-8859-1'?>
+<ROWSET>
+   <ROW num="1">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - INYECTABLE 5CC</LABEL_COL>
+      <KEY_COL>1-9</KEY_COL>
+   </ROW>
+   <ROW num="2">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - INYECTABLE 5CC</LABEL_COL>
+      <KEY_COL>1-7</KEY_COL>
+   </ROW>
+   <ROW num="3">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - PERFIL LIPIDICO</LABEL_COL>
+      <KEY_COL>1-9</KEY_COL>
+   </ROW>
+   <ROW num="4">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - PERFIL LIPIDICO</LABEL_COL>
+      <KEY_COL>1-7</KEY_COL>
+   </ROW>
+   <ROW num="5">
+      <VALUE_COL>5</VALUE_COL>
+      <LABEL_COL>5 - INYECTABLE 10CC</LABEL_COL>
+      <KEY_COL>1-7</KEY_COL>
+   </ROW>
+</ROWSET>

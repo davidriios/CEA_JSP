@@ -1,0 +1,183 @@
+<?xml version = '1.0' encoding='ISO-8859-1'?>
+<ROWSET>
+   <ROW num="1">
+      <VALUE_COL>1</VALUE_COL>
+      <LABEL_COL>1 - SIN ANAQUEL</LABEL_COL>
+      <KEY_COL>1@-1</KEY_COL>
+   </ROW>
+   <ROW num="2">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@14</KEY_COL>
+   </ROW>
+   <ROW num="3">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@13</KEY_COL>
+   </ROW>
+   <ROW num="4">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@12</KEY_COL>
+   </ROW>
+   <ROW num="5">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@11</KEY_COL>
+   </ROW>
+   <ROW num="6">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@10</KEY_COL>
+   </ROW>
+   <ROW num="7">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@9</KEY_COL>
+   </ROW>
+   <ROW num="8">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@8</KEY_COL>
+   </ROW>
+   <ROW num="9">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@7</KEY_COL>
+   </ROW>
+   <ROW num="10">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@6</KEY_COL>
+   </ROW>
+   <ROW num="11">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@5</KEY_COL>
+   </ROW>
+   <ROW num="12">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@4</KEY_COL>
+   </ROW>
+   <ROW num="13">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@2</KEY_COL>
+   </ROW>
+   <ROW num="14">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@1</KEY_COL>
+   </ROW>
+   <ROW num="15">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@-1</KEY_COL>
+   </ROW>
+   <ROW num="16">
+      <VALUE_COL>-1</VALUE_COL>
+      <LABEL_COL>-1 - TODOS</LABEL_COL>
+      <KEY_COL>1@15</KEY_COL>
+   </ROW>
+   <ROW num="17">
+      <VALUE_COL>2</VALUE_COL>
+      <LABEL_COL>2 - ANAQUEL 1</LABEL_COL>
+      <KEY_COL>1@1</KEY_COL>
+   </ROW>
+   <ROW num="18">
+      <VALUE_COL>297</VALUE_COL>
+      <LABEL_COL>297 - AMPOLLAS</LABEL_COL>
+      <KEY_COL>1@5</KEY_COL>
+   </ROW>
+   <ROW num="19">
+      <VALUE_COL>298</VALUE_COL>
+      <LABEL_COL>298 - BANDEJAS-KIT</LABEL_COL>
+      <KEY_COL>1@5</KEY_COL>
+   </ROW>
+   <ROW num="20">
+      <VALUE_COL>299</VALUE_COL>
+      <LABEL_COL>299 - ORTOPEDIA</LABEL_COL>
+      <KEY_COL>1@5</KEY_COL>
+   </ROW>
+   <ROW num="21">
+      <VALUE_COL>300</VALUE_COL>
+      <LABEL_COL>300 - PASTILLAS</LABEL_COL>
+      <KEY_COL>1@5</KEY_COL>
+   </ROW>
+   <ROW num="22">
+      <VALUE_COL>301</VALUE_COL>
+      <LABEL_COL>301 - QUIRURJICOS</LABEL_COL>
+      <KEY_COL>1@5</KEY_COL>
+   </ROW>
+   <ROW num="23">
+      <VALUE_COL>302</VALUE_COL>
+      <LABEL_COL>302 - SOLUCIONES</LABEL_COL>
+      <KEY_COL>1@5</KEY_COL>
+   </ROW>
+   <ROW num="24">
+      <VALUE_COL>303</VALUE_COL>
+      <LABEL_COL>303 - SUTURAS</LABEL_COL>
+      <KEY_COL>1@5</KEY_COL>
+   </ROW>
+   <ROW num="25">
+      <VALUE_COL>304</VALUE_COL>
+      <LABEL_COL>304 - TUBOS</LABEL_COL>
+      <KEY_COL>1@5</KEY_COL>
+   </ROW>
+   <ROW num="26">
+      <VALUE_COL>306</VALUE_COL>
+      <LABEL_COL>306 - AMPOLLAS</LABEL_COL>
+      <KEY_COL>1@4</KEY_COL>
+   </ROW>
+   <ROW num="27">
+      <VALUE_COL>307</VALUE_COL>
+      <LABEL_COL>307 - SOLUCIONES</LABEL_COL>
+      <KEY_COL>1@4</KEY_COL>
+   </ROW>
+   <ROW num="28">
+      <VALUE_COL>308</VALUE_COL>
+      <LABEL_COL>308 - PASTILLAS</LABEL_COL>
+      <KEY_COL>1@4</KEY_COL>
+   </ROW>
+   <ROW num="29">
+      <VALUE_COL>309</VALUE_COL>
+      <LABEL_COL>309 - QUIRURGICO</LABEL_COL>
+      <KEY_COL>1@4</KEY_COL>
+   </ROW>
+   <ROW num="30">
+      <VALUE_COL>310</VALUE_COL>
+      <LABEL_COL>310 - TUBOS</LABEL_COL>
+      <KEY_COL>1@4</KEY_COL>
+   </ROW>
+   <ROW num="31">
+      <VALUE_COL>311</VALUE_COL>
+      <LABEL_COL>311 - ORTOPEDIA</LABEL_COL>
+      <KEY_COL>1@4</KEY_COL>
+   </ROW>
+   <ROW num="32">
+      <VALUE_COL>402</VALUE_COL>
+      <LABEL_COL>402 - TODO</LABEL_COL>
+      <KEY_COL>1@5</KEY_COL>
+   </ROW>
+   <ROW num="33">
+      <VALUE_COL>403</VALUE_COL>
+      <LABEL_COL>403 - COMPRAS TODO</LABEL_COL>
+      <KEY_COL>1@5</KEY_COL>
+   </ROW>
+   <ROW num="34">
+      <VALUE_COL>90</VALUE_COL>
+      <LABEL_COL>90 - GASTOS</LABEL_COL>
+      <KEY_COL>1@4</KEY_COL>
+   </ROW>
+   <ROW num="35">
+      <VALUE_COL>91</VALUE_COL>
+      <LABEL_COL>91 - GASTOS</LABEL_COL>
+      <KEY_COL>1@5</KEY_COL>
+   </ROW>
+   <ROW num="36">
+      <VALUE_COL>92</VALUE_COL>
+      <LABEL_COL>92 - ENDOSC</LABEL_COL>
+      <KEY_COL>1@7</KEY_COL>
+   </ROW>
+</ROWSET>

@@ -1,0 +1,1 @@
+ALTER TABLE tbl_pla_temp_marcacion ADD manual char(1) DEFAULT 'N'

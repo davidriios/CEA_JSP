@@ -1,0 +1,3 @@
+#linea 267 FACTURACION
+#Para indicar si se muestra o no el link de impresion fiscal desde lista de envio. S=SI, N=NO (DEFAULT)
+printFiscalCorporacion=N

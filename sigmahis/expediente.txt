@@ -1,0 +1,11 @@
+Revision: 7948
+Author: jacinto
+Date: 9/9/19 10:04:10 a. m.
+Message:
+* Issue #8877: Control destrotix
+Se ajusta el ordenamiento de los registros en la sección indicada.
+build/web/expediente/exp_resultados_paciente.jsp
+
+----
+Modified : /build/web/expediente/exp_resultados_paciente.jsp
+
